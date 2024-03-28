@@ -1,9 +1,10 @@
+import React from "react"
 function Person({name, lastName, description, imageSource})
 {
     return (
         <>
              <div>              
-                {/* <img src={imageSource} alt={name}> </img> */}
+                <img src={imageSource} alt={name} />
                 <h2>{name} {lastName}</h2>                  
                 <p>{description}</p>
             </div>

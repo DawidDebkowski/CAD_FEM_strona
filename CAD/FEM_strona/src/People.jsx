@@ -11,7 +11,9 @@ function People({peopleList})
     return (
         <>
             <section>
-                {rows}
+                <div id="people">
+                    {rows}
+                </div>
             </section>
         </>
     )

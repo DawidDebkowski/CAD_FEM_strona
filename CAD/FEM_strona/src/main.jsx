@@ -7,6 +7,8 @@ import People from './People.jsx'
 
 const people = [
   {name: "Imie", lastName: "Nazwisko", imageSource: "./person.png", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore facere blanditiis illo distinctio autem possimus praesentium optio ad error consectetur corrupti iusto, obcaecati vero voluptates recusandae reiciendis repellendus nisi aspernatur?"},
+  {name: "Imie", lastName: "Nazwisko", imageSource: "./person.png", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore facere blanditiis illo distinctio autem possimus praesentium optio ad error consectetur corrupti iusto, obcaecati vero voluptates recusandae reiciendis repellendus nisi aspernatur?"},
+  {name: "Imie", lastName: "Nazwisko", imageSource: "./person.png", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore facere blanditiis illo distinctio autem possimus praesentium optio ad error consectetur corrupti iusto, obcaecati vero voluptates recusandae reiciendis repellendus nisi aspernatur?"},
   {name: "Jan", lastName: "Kowalski", imageSource: "./person.png", description: "Lorem ipsum dolor123 sit amet consectetur adipisicing elit. Tempore facere blanditiis illo distinctio autem possimus praesentium optio ad error consectetur corrupti iusto, obcaecati vero voluptates recusandae reiciendis repellendus nisi aspernatur?"}
 ]
 
