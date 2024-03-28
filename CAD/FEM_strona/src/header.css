@@ -1,0 +1,27 @@
+#nagl{
+    display: flex;
+    justify-content: left;
+    height: 80px;
+    background-color: #1D3857;
+    /* border: solid blue; */
+}
+#nagl img{   
+    width: 100%;           /*do wywalenia jak sie naucze to robic dobrze xD*/
+    height: 80px;
+}
+#zdjecie_n{
+    width: 20%;
+    height: 80px;
+}
+#przyciski{
+    width: 80%;
+    display: flex;
+    height: 80px;
+}
+#przyciski button{
+    width: 100%;
+    background-color: rgba(0, 0, 0, alpha);
+    border-width: 0;
+    color: white;
+    font-size: larger;
+}

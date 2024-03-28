@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import Person from './person.jsx'
 import People from './People.jsx'
+import Header from './Header.jsx'
 
 const people = [
   {name: "Imie", lastName: "Nazwisko", imageSource: "./person.png", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore facere blanditiis illo distinctio autem possimus praesentium optio ad error consectetur corrupti iusto, obcaecati vero voluptates recusandae reiciendis repellendus nisi aspernatur?"},
@@ -15,5 +15,10 @@ const people = [
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <People peopleList={people}/>
+  </React.StrictMode>,
+)
+ReactDOM.createRoot(document.getElementById('header')).render(
+  <React.StrictMode>
+    <Header></Header>
   </React.StrictMode>,
 )
