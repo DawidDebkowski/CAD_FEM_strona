@@ -1,18 +1,32 @@
 section{
     justify-content: center;
-    border: solid green;
 }
 #people {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0px 30px;
 }
 .person img{
-    max-width: 50%;
+    max-width: 75%;
     max-height: 50%;
 }
 .person{
-    /* flex: 33%; */
     flex-basis: 33%;
+}
+.departmentDiv {
+    justify-content: center;
+}
+.departmentRow {
+    width: fit-content;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 0;
+}
+.departmentRow h1{
+    text-align: center;
+    padding-left: 325px;
+    padding-right: 325px;
+    margin-bottom: 20px;
 }

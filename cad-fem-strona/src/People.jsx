@@ -5,10 +5,11 @@ function DepartmentRow({name})
 {
     console.log(name)
     return (
-        <div id="departmentRow">
-            <h2>
+        <div className="departmentRow">
+            <h1>
                 {name}
-            </h2>
+            </h1>
+            <hr></hr>
         </div>
     )
 }
@@ -24,12 +25,14 @@ function DepartmentDiv({depName, peopleList})
     });
     return (
         <>
-            <DepartmentRow name={depName}/>
-            <section id="peopleSec">
-                <div id="people">
-                    {rows}
-                </div>
-            </section>
+            <div className="departmentDiv">
+                <DepartmentRow name={depName}/>
+                <section id="peopleSec">
+                    <div id="people">
+                        {rows}
+                    </div>
+                </section>
+            </div>
         </>
     )
 }
@@ -55,7 +58,9 @@ function People({peopleList})
     return (
         <>
             <section id="departments">
-                {rows}
+                {/* <div section="departments"> */}
+                    {rows}
+                {/* </div> */}
             </section>
         </>
     )
