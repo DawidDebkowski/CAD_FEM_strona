@@ -3,9 +3,9 @@ function Person({name, lastName, description, imageSource})
 {
     return (
         <>
-             <div>              
+             <div className="person">              
                 <img src={imageSource} alt={name} />
-                <h2>{name} {lastName}</h2>                  
+                <h2>{name} {lastName}</h2>
                 <p>{description}</p>
             </div>
         </>
