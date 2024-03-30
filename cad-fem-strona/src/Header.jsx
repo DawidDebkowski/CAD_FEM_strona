@@ -2,7 +2,6 @@ import "./header.css"
 
 function Header()
 {
-
     function switchDocument(input)
     {
         document.location = input

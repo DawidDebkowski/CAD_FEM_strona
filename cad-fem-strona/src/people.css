@@ -5,28 +5,39 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0px 30px;
+    margin: 0% 5%;
 }
 .person img{
+    margin: auto;
     max-width: 75%;
     max-height: 50%;
 }
 .person{
     flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-size: 100%;
+}
+.person h2{
+    margin-bottom: auto;
 }
 .departmentDiv {
-    justify-content: center;
+    margin: auto;
 }
 .departmentRow {
-    width: fit-content;
-    text-align: center;
-    justify-content: center;
+    width: 50%;
     margin: auto;
     padding-bottom: 0;
 }
 .departmentRow h1{
     text-align: center;
-    padding-left: 325px;
-    padding-right: 325px;
     margin-bottom: 20px;
+
+}
+.departmentRow hr{
+    position: relative;
+    
 }
