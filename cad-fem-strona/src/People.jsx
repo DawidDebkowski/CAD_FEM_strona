@@ -39,16 +39,19 @@ function DepartmentDiv({depName, peopleList})
 
 function People({peopleList})
 {
+    console.log("Wywolanie people");
     const departments = []
     const rows = []
     peopleList.forEach(person => {
         if(!departments.includes(person.department))
         {
+            console.log(person)
             const departmentList = [];
             peopleList.forEach(person2 => {
                 if(person2.department==person.department)
                 {
-                    departmentList.push(person);
+                    console.log(person)
+                    departmentList.push(person2);
                 }
             });
             rows.push(<DepartmentDiv depName={person.department} peopleList={departmentList}/>);
