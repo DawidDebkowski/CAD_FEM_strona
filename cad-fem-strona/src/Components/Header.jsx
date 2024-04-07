@@ -14,8 +14,8 @@ function Header()
                 </div>
                 <div id="przyciski">
                     <button id="prz1" onClick={()=>{switchDocument("Aktualności")}}>Aktualności</button>
-                    <button id="prz1" onClick={()=>{switchDocument("aboutUs.html")}}>O Nas</button>
-                    <button id="prz1" onClick={()=>{switchDocument("projekt")}}>Projekty</button>
+                    <button id="prz1" onClick={()=>{switchDocument("AboutUs")}}>O Nas</button>
+                    <button id="prz1" onClick={()=>{switchDocument("Dom")}}>Projekty</button>
                     <button id="prz1" onClick={()=>{switchDocument("sposor")}}>Sponsorzy</button>
                     <button id="prz1" onClick={()=>{switchDocument("kontak")}}>Kontakt</button>
                 </div>
