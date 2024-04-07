@@ -20,9 +20,13 @@ section{
     justify-content: center;
     text-align: center;
     font-size: 100%;
+    background-color: #c0c0c0;
 }
 .person h2{
     margin-bottom: auto;
+}
+.person p{
+    margin-top: auto;
 }
 .departmentDiv {
     margin: auto;
@@ -38,6 +42,7 @@ section{
 
 }
 .departmentRow hr{
-    position: relative;
-    
+    background-color: #1D3857;
+    border: 0.1em solid #1D3857;
+    border-radius: 100px;
 }
