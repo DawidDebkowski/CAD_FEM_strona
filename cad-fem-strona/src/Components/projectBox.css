@@ -1,0 +1,30 @@
+.projectDiv{
+    display: flex;
+    max-width: fit-content;
+    max-height: fit-content;
+    border: solid black 2px;
+    box-sizing: border-box;
+    gap: 1%;
+    margin: 2%;
+}
+.projectTexts{
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    margin-right: 10px;
+}
+.projectDiv img{
+    margin: auto;
+    max-width: 100%;
+    /* max-height: 100%; */
+}
+.projectImage {
+    float: left;
+    margin: auto;
+}
+.projectTexts h1{
+    text-align: center;
+}
+.projectTexts p{
+    text-align: justify;
+}
