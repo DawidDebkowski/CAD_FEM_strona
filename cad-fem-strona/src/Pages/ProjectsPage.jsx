@@ -15,6 +15,9 @@ export default function ProjectsPage()
     return (
         <>
             <Header />
+            <div className="heading">
+                <h1>Nasze Projekty</h1>
+            </div>
             <div className="mainBody">
                 <ProjectsHolder projects={projects} />
             </div>
