@@ -2,10 +2,11 @@ section{
     justify-content: center;
 }
 #people {
+    --gap_size: 1%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1%;
+    gap: var(--gap_size);
     margin: 0% 5%;
 }
 .person img{
@@ -21,6 +22,7 @@ section{
     text-align: center;
     font-size: 100%;
     background-color: #c0c0c0;
+    margin-bottom: var(--gap_size);
 }
 .person h2{
     margin-bottom: auto;
