@@ -1,18 +1,18 @@
-import {Slide} from 'react-slideshow-image'
+import {Fade} from 'react-slideshow-image'
 
 function SlideShow({images}) {
     return (
-        <Slide>
-            <div className="each-slide-effect">
+        <Fade>
+            <div className="each-slide">
+                <img src='LOGO.png'/>
+            </div>
+            <div className="each-slide">
                 <img src='person.png'/>
             </div>
-            <div className="each-slide-effect">
+            <div className="each-slide">
                 <img src='person.png'/>
             </div>
-            <div className="each-slide-effect">
-                <img src='person.png'/>
-            </div>
-        </Slide>
+        </Fade>
     );
 };
 
