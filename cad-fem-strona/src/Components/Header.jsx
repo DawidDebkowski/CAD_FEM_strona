@@ -8,7 +8,7 @@ function Header()
     }
     return(
         <section id="naglowek">
-            <div id="nagl" className="content">
+            <div id="nagl">
                 <div id="zdjecie_n">
                     <img src="./LOGO.png" alt="brak zdj logo" />
                 </div>
