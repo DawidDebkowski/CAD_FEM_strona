@@ -2,17 +2,19 @@ import {Fade} from 'react-slideshow-image'
 
 function SlideShow({images}) {
     return (
-        <Fade>
-            <div className="each-slide">
-                <img src='LOGO.png'/>
-            </div>
-            <div className="each-slide">
-                <img src='person.png'/>
-            </div>
-            <div className="each-slide">
-                <img src='person.png'/>
-            </div>
-        </Fade>
+        <div  className="slideshow-container">
+            <Fade>
+                <div className="each-slide">
+                    <img src='LOGO.png'/>
+                </div>
+                <div className="each-slide">
+                    <img src='person.png'/>
+                </div>
+                <div className="each-slide">
+                    <img src='person.png'/>
+                </div>
+            </Fade>
+        </div>
     );
 };
 

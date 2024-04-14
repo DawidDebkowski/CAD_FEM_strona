@@ -4,10 +4,18 @@ section{
     border: solid green; */
 }
 
+.slideshow-container {
+  max-width: 25%;
+  height: 400px;
+  position: relative;
+  margin: auto;
+  border: solid green;
+}
+
 .each-slide {
   display: flex;
-  width: 100%;
-  height: 400px;
+  width: 25%;
+  height: 25%;
 }
 
 .each-slide>div {
@@ -15,8 +23,8 @@ section{
 }
 
 .each-slide>div img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   object-fit: cover;
 }
 
@@ -90,11 +98,7 @@ section{
 * {box-sizing:border-box}
 
 /* Slideshow container */
-.slideshow-container {
-  max-width: 500px;
-  position: relative;
-  margin: auto;
-}
+
 
 /* Hide the images by default */
 .mySlides {
