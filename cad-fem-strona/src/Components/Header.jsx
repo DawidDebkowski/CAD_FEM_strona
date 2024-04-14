@@ -13,11 +13,11 @@ function Header()
                     <img src="./LOGO.png" alt="brak zdj logo" />
                 </div>
                 <div id="przyciski">
-                    <button id="prz1" onClick={()=>{switchDocument("Aktualności")}}>Aktualności</button>
-                    <button id="prz1" onClick={()=>{switchDocument("AboutUs")}}>O Nas</button>
-                    <button id="prz1" onClick={()=>{switchDocument("Projects")}}>Projekty</button>
-                    <button id="prz1" onClick={()=>{switchDocument("sposor")}}>Sponsorzy</button>
-                    <button id="prz1" onClick={()=>{switchDocument("kontak")}}>Kontakt</button>
+                    <button className="navButton" onClick={()=>{switchDocument("Aktualności")}}>Aktualności</button>
+                    <button className="navButton" onClick={()=>{switchDocument("AboutUs")}}>O Nas</button>
+                    <button className="navButton" onClick={()=>{switchDocument("Projects")}}>Projekty</button>
+                    <button className="navButton" onClick={()=>{switchDocument("sposor")}}>Sponsorzy</button>
+                    <button className="navButton" onClick={()=>{switchDocument("kontak")}}>Kontakt</button>
                 </div>
             </div>
         </section>

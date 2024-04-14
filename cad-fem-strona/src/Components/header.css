@@ -15,10 +15,33 @@
     display: flex;
     height: 80px;
 }
-#przyciski button{
+
+
+.navButton {
+    background-color: #1D3857;
+    transition-duration: 0.4s;
+    transition-property: all;
+    width: 100%;
+
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+.navButton:hover{
+    background-color: #C8C8C8;
+    border: 1px solid;
+    color: #1d3958;
+}
+
+/* #przyciski button{
     width: 100%;
     background-color: rgba(0, 0, 0, alpha);
     border-width: 0;
     color: white;
     font-size: larger;
-}
+} */
