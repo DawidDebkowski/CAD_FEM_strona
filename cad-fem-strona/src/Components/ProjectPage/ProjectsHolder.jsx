@@ -3,10 +3,14 @@ import "./projectsHolder.css"
 
 export default function ProjectsHolder({projects, alternating=false})
 {
-    var projectList = [];
+    let projectList = [];
+    let side = false;
     projects.forEach(project => {
-        projectList.push(<ProjectBox title={project.title} image={project.image} desc={project.desc} linkTo={project.linkTo} isRight={alternating}/>)
-        alternating = !alternating;
+        projectList.push(<ProjectBox title={project.title} image={project.image} desc={project.desc} linkTo={project.linkTo} isRight={side}/>)
+        if(alternating)
+        {
+            side = !side;
+        }
     });
     return (
         <div className="projectsHolder">
