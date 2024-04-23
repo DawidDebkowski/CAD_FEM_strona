@@ -1,3 +1,4 @@
+import LinkerButton from "./LinkerButton"
 import "./projectBox.css"
 
 export default function ProjectBox({title, image, desc})
@@ -13,6 +14,7 @@ export default function ProjectBox({title, image, desc})
             <div className="description">
                 <p>{desc}</p>
             </div>
+            <LinkerButton className="linkerButton" text="Przeczytaj" linkTo="AboutUs"></LinkerButton>
         </div>
     )
 }
