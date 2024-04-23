@@ -1,6 +1,5 @@
-import Header from "../Components/Header";
-import ProjectBox from "../Components/ProjectBox";
-import ProjectsHolder from "../Components/ProjectsHolder";
+import Header from "../Components/MainHeader/Header.jsx";
+import ProjectsHolder from "../Components/ProjectPage/ProjectsHolder";
 import "./projectsPage.css"
 
 const projects = [

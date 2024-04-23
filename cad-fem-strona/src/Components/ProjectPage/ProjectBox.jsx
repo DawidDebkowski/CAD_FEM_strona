@@ -1,4 +1,4 @@
-import LinkerButton from "./LinkerButton"
+import LinkerButton from "../AboutUsPage/LinkerButton"
 import "./projectBox.css"
 
 export default function ProjectBox({title, image, desc})

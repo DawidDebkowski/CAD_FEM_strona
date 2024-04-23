@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Components/Header";
+import Header from "../Components/MainHeader/Header.jsx";
 import ReactDOM from 'react-dom/client'
 import './homePage.css'
 import SlideShow from "../Components/HomePage/SlideShow";
@@ -17,7 +17,9 @@ export default function HomePage()
     return (
     <>
     <Header/>
-    <SlideShow images={images}/>
+    <section id="slideshow">
+        <SlideShow images={images}/>
+    </section>
     <section id="onessec">
         <div id="onasdiv">
             <div id="gora">

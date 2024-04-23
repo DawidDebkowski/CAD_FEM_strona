@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import "../index.css"
-import People from '../Components/People.jsx'
-import Header from '../Components/Header.jsx'
-import MainPhoto from '../Components/MainPhoto.jsx'
+import People from '../Components/AboutUsPage/People.jsx'
+import Header from '../Components/MainHeader/Header.jsx'
+import MainPhoto from '../Components/AboutUsPage/MainPhoto.jsx'
 
 const people = [
   {
