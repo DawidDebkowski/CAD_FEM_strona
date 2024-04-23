@@ -1,4 +1,5 @@
 import "./header.css"
+import {Link} from "react-router-dom"
 
 function Header()
 {
@@ -10,7 +11,9 @@ function Header()
         <section id="naglowek">
             <div id="nagl">
                 <div id="zdjecie_n">
-                    <img src="./LOGO.png" alt="brak zdj logo" />
+                    <Link to={"/Home"}>
+                        <img src="./LOGO.png" alt="brak zdj logo" />
+                    </Link>
                 </div>
                 <div id="przyciski">
                     <button className="navButton" onClick={()=>{switchDocument("Aktualności")}}>Aktualności</button>
