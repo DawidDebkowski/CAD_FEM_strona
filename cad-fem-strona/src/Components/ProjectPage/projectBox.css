@@ -14,6 +14,14 @@
 .projectTexts{
     /* margin: 1%; */
 }
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
 .projectDiv img{
     float: left;
     width: 40%;

@@ -8,7 +8,7 @@ function SlideShow({images}) {
                     <img src='LOGO.png'/>
                 </div>
                 <div className="each-slide">
-                    <img src='person.png'/>
+                    <img src='szerokiMechanik.png'/>
                 </div>
                 <div className="each-slide">
                     <img src='person.png'/>

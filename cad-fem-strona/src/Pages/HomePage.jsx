@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import './homePage.css'
 import SlideShow from "../Components/HomePage/SlideShow";
 import 'react-slideshow-image/dist/styles.css'
+import ProjectsHolder from "../Components/ProjectPage/ProjectsHolder.jsx";
 
 const images = [
     "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
@@ -20,12 +21,18 @@ export default function HomePage()
     <section id="slideshow">
         <SlideShow images={images}/>
     </section>
+    <br/>
     <section id="onessec">
         <div id="onasdiv">
-            <div id="gora">
+            <ProjectsHolder projects={[{title: "Trochę o CAD/FEM", 
+            image: "mechanicy.png", 
+            linkTo: "/AboutUs",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius elementum massa, non ullamcorper neque malesuada ac. Pellentesque convallis ultricies mi eget aliquam. Aliquam erat volutpat. Integer fermentum vehicula sapien. Morbi placerat ullamcorper erat id euismod. Cras ullamcorper condimentum turpis ac rhoncus. Aliquam sit amet velit tortor. Integer scelerisque faucibus egestas. Phasellus posuere scelerisque mi nec molestie. Duis condimentum luctus felis ut efficitur. Maecenas enim leo, egestas a auctor ac, egestas in odio. Nunc semper leo id est scelerisque, sed faucibus nibh viverra."}
+            ]}/>
+            {/* <div id="gora">
                 <p class="tekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officiis quos iusto ad culpa illo ea recusandae ipsum magni deleniti? Quisquam dolore error eveniet officia magni suscipit placeat nisi quia.</p>
                 <img id="zdj" src="mechanicy.png" alt="o_nas_zdj"/>
-            </div>
+            </div> */}
         </div>
     </section>
 
