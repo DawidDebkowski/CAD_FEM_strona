@@ -18,6 +18,7 @@ export default function HomePage()
     return (
     <>
     <Header/>
+    <link rel="icon" type="image/ico" href="./favicon.ico" />
     <section id="slideshow">
         <SlideShow images={images}/>
     </section>

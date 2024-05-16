@@ -16,11 +16,12 @@ function Header()
                     </Link>
                 </div>
                 <div id="przyciski">
-                    <button className="navButton" onClick={()=>{switchDocument("Aktualności")}}>Aktualności</button>
-                    <button className="navButton" onClick={()=>{switchDocument("Projects")}}>Projekty</button>
-                    <button className="navButton" onClick={()=>{switchDocument("sposor")}}>Sponsorzy</button>
-                    <button className="navButton" onClick={()=>{switchDocument("AboutUs")}}>O Nas</button>
-                    <button className="navButton" onClick={()=>{switchDocument("kontak")}}>Kontakt</button>
+                    <button className="navButton" onClick={()=>{switchDocument("dom")}}>Strona Główna</button>
+                    <button className="navButton" onClick={()=>{switchDocument("aktualnosci")}}>Aktualności</button>
+                    <button className="navButton" onClick={()=>{switchDocument("projekty")}}>Projekty</button>
+                    <button className="navButton" onClick={()=>{switchDocument("sponsorzy")}}>Sponsorzy</button>
+                    <button className="navButton" onClick={()=>{switchDocument("o-nas")}}>O Nas</button>
+                    <button className="navButton" onClick={()=>{switchDocument("kontakt")}}>Kontakt</button>
                 </div>
             </div>
         </section>

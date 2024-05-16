@@ -1,0 +1,16 @@
+.main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title
+{
+    text-align: center;
+}
+
+.main img 
+{
+    width: 50%;
+}
