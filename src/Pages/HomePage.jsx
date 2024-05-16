@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Components/MainHeader/Header.jsx";
 import ReactDOM from 'react-dom/client'
 import './homePage.css'
-import SlideShow from "../Components/HomePage/SlideShow";
+import SlideShow from "../Components/HomePage/SlideShow.jsx";
 import 'react-slideshow-image/dist/styles.css'
 import ProjectsHolder from "../Components/ProjectPage/ProjectsHolder.jsx";
 

@@ -1,5 +1,5 @@
 import Header from "../Components/MainHeader/Header.jsx";
-import ProjectsHolder from "../Components/ProjectPage/ProjectsHolder";
+import ProjectsHolder from "../Components/ProjectPage/ProjectsHolder.jsx";
 import "./projectsPage.css"
 
 const projects = [
