@@ -1,12 +1,10 @@
 import LinkerButton from "../LinkerButton"
 import "./projectBox.css"
 
-export default function ProjectBox({title, image, desc, linkTo, isRight=false})
-{
+export default function ProjectBox({ title, image, desc, linkTo, isRight = false }) {
     let baseDirection = "left";
     let buttonDir = "right"
-    if(isRight)
-    {
+    if (isRight) {
         baseDirection = "right"
         buttonDir = "left"
     }
@@ -18,10 +16,10 @@ export default function ProjectBox({title, image, desc, linkTo, isRight=false})
             <div className="projectTexts">
                 <h1>{title}</h1>
             </div>
-            <hr/>
+            <hr />
             <div className="description">
                 <p>{desc}</p>
-            </div> 
+            </div>
             <LinkerButton text="Więcej" linkTo={linkTo} moreClasses={buttonDir}></LinkerButton>
         </div>
     )

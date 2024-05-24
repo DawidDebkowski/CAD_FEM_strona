@@ -1,17 +1,17 @@
-import {Fade} from 'react-slideshow-image'
+import { Fade } from 'react-slideshow-image'
 
-function SlideShow({images}) {
+function SlideShow({ images }) {
     return (
-        <div  className="slideshow-container">
+        <div className="slideshow-container">
             <Fade>
                 <div className="each-slide">
-                    <img src='LOGO.png'/>
+                    <img src='LOGO.png' />
                 </div>
                 <div className="each-slide">
-                    <img src='szerokiMechanik.png'/>
+                    <img src='szerokiMechanik.png' />
                 </div>
                 <div className="each-slide">
-                    <img src='person.png'/>
+                    <img src='person.png' />
                 </div>
             </Fade>
         </div>

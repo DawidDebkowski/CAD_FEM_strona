@@ -1,15 +1,13 @@
 import LinkButton from "../Other/LinkButton"
 import "./header.css"
-import {Link} from "react-router-dom"
-import { myRoutes } from "../../App"    
+import { Link } from "react-router-dom"
+import { myRoutes } from "../../App"
 
-function Header()
-{
-    function switchDocument(input)
-    {
+function Header() {
+    function switchDocument(input) {
         document.location = input
     }
-    return(
+    return (
         <section id="naglowek">
             <div id="nagl">
                 <div id="zdjecie_n">

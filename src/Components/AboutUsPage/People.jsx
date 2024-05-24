@@ -1,8 +1,7 @@
 import Person from "./Person";
 import "./people.css"
 
-function DepartmentRow({name})
-{
+function DepartmentRow({ name }) {
     console.log(name)
     return (
         <div className="departmentRow">
@@ -14,19 +13,18 @@ function DepartmentRow({name})
     )
 }
 
-function DepartmentDiv({depName, peopleList})
-{
+function DepartmentDiv({ depName, peopleList }) {
     const rows = []
     peopleList.forEach(person => {
         console.log(person.department)
         rows.push(
-            <Person name={person.name} lastName={person.lastName} imageSource={person.imageSource} description={person.description}/>
+            <Person name={person.name} lastName={person.lastName} imageSource={person.imageSource} description={person.description} />
         )
     });
     return (
         <>
             <div className="departmentDiv">
-                <DepartmentRow name={depName}/>
+                <DepartmentRow name={depName} />
                 <section id="peopleSec">
                     <div id="people">
                         {rows}
@@ -37,24 +35,21 @@ function DepartmentDiv({depName, peopleList})
     )
 }
 
-function People({peopleList})
-{
+function People({ peopleList }) {
     console.log("Wywolanie people");
     const departments = []
     const rows = []
     peopleList.forEach(person => {
-        if(!departments.includes(person.department))
-        {
+        if (!departments.includes(person.department)) {
             console.log(person)
             const departmentList = [];
             peopleList.forEach(person2 => {
-                if(person2.department==person.department)
-                {
+                if (person2.department == person.department) {
                     console.log(person)
                     departmentList.push(person2);
                 }
             });
-            rows.push(<DepartmentDiv depName={person.department} peopleList={departmentList}/>);
+            rows.push(<DepartmentDiv depName={person.department} peopleList={departmentList} />);
             departments.push(person.department)
         }
     });
@@ -62,7 +57,7 @@ function People({peopleList})
         <>
             <section id="departments">
                 {/* <div section="departments"> */}
-                    {rows}
+                {rows}
                 {/* </div> */}
             </section>
         </>
