@@ -1,5 +1,3 @@
-import * as React from "react";
-import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './Pages/HomePage.jsx'
 import './Pages/AboutUs.jsx'
@@ -25,7 +23,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<HomePage />} />
-          <Route path="/" element={<AboutUs />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/dom" element={<HomePage />} />
           <Route path="/Home" element={<HomePage />} />
           <Route path="/o-nas" element={<AboutUs />} />
