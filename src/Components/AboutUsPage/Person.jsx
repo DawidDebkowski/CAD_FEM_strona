@@ -1,4 +1,5 @@
-import React from "react"
+import PropTypes from "prop-types"
+
 function Person({ name, lastName, description, imageSource }) {
     return (
         <>
@@ -10,5 +11,10 @@ function Person({ name, lastName, description, imageSource }) {
         </>
     )
 }
-
+Person.propTypes = {
+  description: PropTypes.string,
+  imageSource: PropTypes.string,
+  lastName: PropTypes.string,
+  name: PropTypes.string
+}
 export default Person
