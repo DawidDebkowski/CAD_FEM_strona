@@ -45,8 +45,15 @@
 }
 .btn {
     /* float: right; */
+    transition-duration: 0.4s;
+    transition-property: all;
+
     margin: 1%;
     background-color: #4485CF;
     padding: 1%;
     font-size: large;
+}
+
+.btn:hover {
+    background-color: #1E6EC9;
 }
