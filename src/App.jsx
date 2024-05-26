@@ -7,6 +7,8 @@ import ProjectsPage from "./Pages/ProjectsPage.jsx";
 import SponsorPage from "./Pages/SponsorPage.jsx";
 import NewsPage from "./Pages/NewsPage.jsx";
 import ContactPage from "./Pages/ContactPage.jsx";
+import SinglePostPage from "./Pages/SinglePostPage.jsx";
+import Header from "./Components/MainHeader/Header.jsx";
 
 export const myRoutes = {
   "dom": "/dom",
@@ -21,6 +23,7 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
@@ -31,6 +34,7 @@ export default function App() {
           <Route path="/sponsorzy" element={<SponsorPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/aktualnosci" element={<NewsPage />} />
+          <Route path="/projekty/testPost" element={<SinglePostPage />} />
         </Routes>
       </BrowserRouter>
     </div>

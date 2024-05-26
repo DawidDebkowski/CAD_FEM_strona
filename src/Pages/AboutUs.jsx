@@ -1,8 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 import "../index.css"
 import People from '../Components/AboutUsPage/People.jsx'
-import Header from '../Components/MainHeader/Header.jsx'
 import MainPhoto from '../Components/AboutUsPage/MainPhoto.jsx'
 
 const people = [
@@ -33,7 +31,6 @@ export default function AboutUs()
 {
     return (
       <React.StrictMode>
-        <Header></Header>
         <MainPhoto></MainPhoto>
         <People peopleList={people}/>
       </React.StrictMode>

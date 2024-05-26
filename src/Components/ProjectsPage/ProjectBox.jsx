@@ -20,7 +20,7 @@ export default function ProjectBox({ title, image, desc, linkTo, isRight = false
             <div className="description">
                 <p>{desc}</p>
             </div>
-            <LinkerButton text="Więcej" linkTo={linkTo} moreClasses={buttonDir}></LinkerButton>
+            <LinkerButton text="Więcej" linkTo={linkTo} moreClasses={buttonDir}/>
         </div>
     )
 }

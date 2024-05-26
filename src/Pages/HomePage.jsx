@@ -1,8 +1,7 @@
-import Header from "../Components/MainHeader/Header.jsx";
 import './homePage.css'
 import SlideShow from "../Components/HomePage/SlideShow.jsx";
 import 'react-slideshow-image/dist/styles.css'
-import ProjectsHolder from "../Components/ProjectPage/ProjectsHolder.jsx";
+import ProjectsHolder from "../Components/ProjectsPage/ProjectsHolder.jsx";
 import { Link } from "react-router-dom";
 import { myRoutes } from "../App.jsx";
 
@@ -16,7 +15,6 @@ export default function HomePage() {
     //window.location.href = "/home.html";
     return (
         <>
-            <Header />
             <link rel="icon" type="image/ico" href="./favicon.ico" />
             <section id="slideshow">
                 <SlideShow images={images} />
@@ -40,7 +38,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* <section id="stopkasec">
+            <section id="stopkasec">
                 <div id="stopkadiv" className="content">
                     <div id="stpkl">
                         <Link to={myRoutes.kontakt}> Kontakt </Link>
@@ -49,7 +47,7 @@ export default function HomePage() {
                         <h5>Stronę stworzył: Dawid Dębkowski</h5>
                     </div>
                 </div>
-            </section> */}
+            </section>
         </>
     )
 }

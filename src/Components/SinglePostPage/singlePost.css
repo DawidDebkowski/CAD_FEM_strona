@@ -1,0 +1,30 @@
+.singlePost {
+    flex: 0.9; 
+    /* lol */
+}
+
+.singlePostWrapper {
+    padding: 20px;
+}
+
+.singlePostImg {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.singlePostTitle {
+    margin: 10px;
+    text-align: center;
+}
+
+.singlePostInfo {
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    margin-bottom: 20px;
+}
+.singlePostAuthor {
+    float: right;
+}
