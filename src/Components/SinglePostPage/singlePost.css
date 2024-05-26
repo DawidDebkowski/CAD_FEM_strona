@@ -22,9 +22,18 @@
 .singlePostInfo {
     display: flex;
     justify-content: space-between;
-    font-size: large;
+    font-size: larger;
     margin-bottom: 20px;
+    color: #4E6CED;
 }
-.singlePostAuthor {
-    float: right;
+
+.singlePostDesc {
+    font-size: large;
+    line-height: 25px;
+}
+
+.singlePostDesc::first-letter {
+    margin-left: 20px;
+    font-size: x-large;
+    font-weight: 600;
 }

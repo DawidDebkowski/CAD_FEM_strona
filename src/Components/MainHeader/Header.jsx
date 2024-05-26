@@ -8,7 +8,7 @@ function Header() {
             <div id="nagl">
                 <div id="zdjecie_n">
                     <Link to={"/Home"}>
-                        <img src="./LOGO.png" alt="brak zdj logo" />
+                        <img src="/LOGO.png" alt="brak zdj logo" />
                     </Link>
                 </div>
                 <nav id="przyciski">

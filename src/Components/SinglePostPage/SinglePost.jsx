@@ -5,7 +5,7 @@ export default function SinglePost() {
         <div className="singlePost">
             <div className="singlePostWrapper">
                 <img src="/mechanicy.png" alt="głowne zdjęcie postu" className="singlePostImg"/>
-                <h1 className="singlePostTitle">Tytuł Projektu</h1>
+                <h1 className="singlePostTitle">Tytuł Projektu, który będzie o taki</h1>
                 <div className="singlePostInfo">
                     <span className="singlePostAuthor">
                         Autor: <b>Imie</b>
@@ -14,7 +14,7 @@ export default function SinglePost() {
                         26.05.2024
                     </span>
                 </div>
-                <p>
+                <p className="singlePostDesc">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Numquam sequi corporis quae nam, id tenetur, accusantium assumenda 
                     aliquid mollitia temporibus obcaecati sapiente quas quasi? 
