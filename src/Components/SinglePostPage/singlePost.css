@@ -1,6 +1,5 @@
 .singlePost {
-    flex: 0.9; 
-    /* lol */
+    width: 70%;
 }
 
 .singlePostWrapper {
@@ -24,7 +23,7 @@
     justify-content: space-between;
     font-size: larger;
     margin-bottom: 20px;
-    color: #4E6CED;
+    color: #474747;
 }
 
 .singlePostDesc {
