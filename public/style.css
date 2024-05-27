@@ -24,18 +24,7 @@ section{
     width: 20%;
     height: 80px;
 }
-#przyciski{
-    width: 80%;
-    display: flex;
-    height: 80px;
-}
-#przyciski button{
-    width: 100%;
-    background-color: rgba(0, 0, 0, alpha);
-    border-width: 0;
-    color: white;
-    font-size: larger;
-}
+
 #onasdiv{
     display: flex;
     flex-direction: column;

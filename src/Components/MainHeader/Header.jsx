@@ -4,15 +4,15 @@ import { myRoutes } from "../../App"
 
 function Header() {
     return (
-        <section id="naglowek">
-            <div id="nagl">
-                <div id="zdjecie_n">
+        <section id="header">
+            <div className="headerWrapper">
+                <div className="headerImage">
                     <Link to={"/Home"}>
                         <img src="/LOGO.png" alt="brak zdj logo" />
                     </Link>
                 </div>
-                <nav id="przyciski">
-                    <Link to={myRoutes.dom} className="navButton">Strona Głowna</Link>
+                <nav className="navBar">
+                    <Link to={myRoutes.dom} className="navButton">Strona Główna</Link>
                     <Link to={myRoutes.aktualnosci} className="navButton">Aktualności</Link>
                     <Link to={myRoutes.projekty} className="navButton">Projekty</Link>
                     <Link to={myRoutes.oNas} className="navButton">O Nas</Link>
