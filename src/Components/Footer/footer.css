@@ -1,0 +1,35 @@
+.footer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+}
+
+.footerSiteName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.footerLogoImage {
+    height: 80px;
+    object-fit: contain;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.footerOtherLogos {
+    display: flex;
+    gap: 20px;
+}
+
+.footerLink {
+    font-size: larger;
+}
