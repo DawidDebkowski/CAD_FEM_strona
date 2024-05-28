@@ -1,0 +1,8 @@
+.newsHolder{
+    display: flex;
+    flex-direction: column;
+    max-width: 66%;
+    gap: 3%;
+    margin-top: 1%;
+    margin-bottom: 10%;
+}

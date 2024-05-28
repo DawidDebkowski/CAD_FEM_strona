@@ -1,0 +1,40 @@
+.newsBox {
+    flex-basis: 1%;
+    margin: auto;
+    padding: 2%;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.newsBoxImageHolder {
+    flex: 1%;
+}
+
+.newsBoxImage {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3%;
+}
+
+.newsBoxLineHolder {
+    display: flex;
+    gap: 3%;
+    align-items: center;
+}
+
+.newsBoxLineHolder hr {
+    width: 100%;
+    border: 0.1em solid black;
+    border-radius: 100px;
+    height: 2px;
+}
+
+.newsBoxLineHolder span {
+    font-weight: 500;
+}
+
+.newsBoxTextWrapper h1{
+}
