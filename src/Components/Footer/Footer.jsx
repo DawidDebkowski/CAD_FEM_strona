@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer">
             <div className="footerSiteName">
                 <img className="footerLogoImage" src="/LOGO.png" alt="logo cad/fem"/>
-                <span>©2024 CAD/FEM, Dawid Dębkowski</span>
+                <span>Copyright © 2024 CAD/FEM, Dawid Dębkowski</span>
             </div>
             <div className="footerLinks">
                 <Link to={myRoutes.dom} className="footerLink">Strona Główna</Link>
