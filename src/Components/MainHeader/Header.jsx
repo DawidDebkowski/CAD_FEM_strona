@@ -20,12 +20,6 @@ function Header() {
                     <Link to={myRoutes.kontakt} className="navButton">Kontakt</Link>
                 </nav>
             </div>
-            <php>
-                $nazwa = 1;
-
-                echo $nazwa
-                 echo To jest test;
-            </php>
         </section>
     )
 }

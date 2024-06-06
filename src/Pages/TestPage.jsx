@@ -2,10 +2,10 @@ import PageInProgress from "../Components/Other/PageInProgress"
 import Swr, { Test } from "../Components/test"
 import "./sponsorPage.css"
 
-export default function SponsorPage() {
+export default function TestPage() {
     return (
         <div className="sponsorPage">
-            <PageInProgress/>
+            <Swr/>
         </div>
     )
 }

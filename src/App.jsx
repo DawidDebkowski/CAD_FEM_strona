@@ -10,6 +10,7 @@ import ContactPage from "./Pages/ContactPage.jsx";
 import SinglePostPage from "./Pages/SinglePostPage.jsx";
 import Header from "./Components/MainHeader/Header.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
+import TestPage from "./Pages/TestPage.jsx";
 
 export const myRoutes = {
   "dom": "/dom",
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/aktualnosci" element={<NewsPage />} />
           <Route path="/projekty/testPost" element={<SinglePostPage />} />
+          <Route path="/testPage" element={<TestPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
