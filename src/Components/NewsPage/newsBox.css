@@ -1,6 +1,7 @@
 .newsBox {
-    flex-basis: 1%;
-    margin: auto;
+    /* flex-basis: 1%; */
+    /* margin: auto; */
+    margin-top: 3%;
     padding: 2%;
     background-color: rgb(255, 255, 255);
 
