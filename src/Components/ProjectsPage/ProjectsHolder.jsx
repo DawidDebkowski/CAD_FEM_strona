@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import ProjectBox from "./ProjectBox";
 import "./projectsHolder.css"
 
@@ -15,4 +16,10 @@ export default function ProjectsHolder({ projects, alternating = false }) {
             {projectList}
         </div>
     )
+}
+ProjectsHolder.propTypes = {
+  alternating: PropTypes.bool,
+  projects: PropTypes.shape({
+    forEach: PropTypes.func
+  })
 }
