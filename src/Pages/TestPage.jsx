@@ -1,5 +1,5 @@
 import PageInProgress from "../Components/Other/PageInProgress"
-import Swr, { Test } from "../Components/test"
+import Swr from "../Components/test"
 import "./sponsorPage.css"
 
 export default function TestPage() {
