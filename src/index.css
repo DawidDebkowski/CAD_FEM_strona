@@ -18,6 +18,20 @@
   flex-direction: column;
 }
 
+/* footer at the bottom */
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 91.5vh;
+}
+
+.appMain {
+  margin-bottom: 200;
+  flex: 1;
+}
+/* footer at the bottom */
+
+
 body {
   margin: 0;
   place-items: center;

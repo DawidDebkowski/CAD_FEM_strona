@@ -11,6 +11,7 @@ import SinglePostPage from "./Pages/SinglePostPage.jsx";
 import Header from "./Components/MainHeader/Header.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import TestPage from "./Pages/TestPage.jsx";
+import AddPersonPage from "./Pages/AddPages/AddPersonPage.jsx";
 
 export const myRoutes = {
   "dom": "/dom",
@@ -23,22 +24,25 @@ export const myRoutes = {
 
 export default function App() {
   return (
-    <div>
+    <div className="appContainer">
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route element={<HomePage />} />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/dom" element={<HomePage />} />
-          <Route path="/Home" element={<HomePage />} />
-          <Route path="/o-nas" element={<AboutUs />} />
-          <Route path="/projekty" element={<ProjectsPage />} />
-          <Route path="/sponsorzy" element={<SponsorPage />} />
-          <Route path="/kontakt" element={<ContactPage />} />
-          <Route path="/aktualnosci" element={<NewsPage />} />
-          <Route path="/projekty/testPost" element={<SinglePostPage />} />
-          <Route path="/testPage" element={<TestPage />} />
-        </Routes>
+        <div className="appMain">
+          <Routes>
+            <Route element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/dom" element={<HomePage />} />
+            <Route path="/Home" element={<HomePage />} />
+            <Route path="/o-nas" element={<AboutUs />} />
+            <Route path="/projekty" element={<ProjectsPage />} />
+            <Route path="/sponsorzy" element={<SponsorPage />} />
+            <Route path="/kontakt" element={<ContactPage />} />
+            <Route path="/aktualnosci" element={<NewsPage />} />
+            <Route path="/projekty/testPost" element={<SinglePostPage />} />
+            <Route path="/testPage" element={<TestPage />} />
+            <Route path="/addPerson" element={<AddPersonPage />} />
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
     </div>
