@@ -1,0 +1,7 @@
+.linkerButton {
+    color: white;
+    text-decoration: inherit;
+    text-align: center;
+    max-height: 80px;
+    text-wrap: nowrap;
+}
