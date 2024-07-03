@@ -6,3 +6,9 @@
     margin-top: 1%;
     margin-bottom: 10%;
 }
+
+@media screen and (max-width: 800px){
+    .newsHolder {
+        max-width: 100%;
+    }
+}

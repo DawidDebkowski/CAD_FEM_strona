@@ -1,8 +1,11 @@
 import "./header.css"
 import { NavLink } from "react-router-dom"
 import { myRoutes } from "../../App"
+import { useState } from "react"
 
 function Header() {
+    const [isOpen, setOpen] = useState(false);
+
     return (
         <section id="header">
             <nav className="headerWrapper">
@@ -10,8 +13,15 @@ function Header() {
                     <NavLink to={"/Home"} className="navLogoButton">
                         <img src="/LOGO.png" alt="brak zdj logo" />
                     </NavLink>
+                    <div className={"menu"} onClick={() => {
+                        setOpen(!isOpen)
+                    }}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-                <div className="navBar">
+                <div className={"navBar " + (isOpen ? "open" : "")} >
                     <NavLink to={myRoutes.dom} className="navButton">Strona Główna</NavLink>
                     <NavLink to={myRoutes.aktualnosci} className="navButton">Aktualności</NavLink>
                     <NavLink to={myRoutes.projekty} className="navButton">Projekty</NavLink>

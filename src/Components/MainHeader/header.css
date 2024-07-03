@@ -2,13 +2,18 @@
     position: fixed;
     top: 0;
     z-index: 1030;
-    width: 100%;
+    width: 100vw;
 }
 
 .headerWrapper {
     display: flex;
     height: var(--header-height);
     background-color: #1D3857;
+}
+
+.headerImage {
+    display: flex;
+    justify-content: space-between;
 }
 
 .headerImage img {
@@ -22,12 +27,6 @@
     height: var(--header-height);
     justify-content: center;
     align-items: center;
-}
-
-@media screen and (max-width: 600px){
-    .navBar {
-        height: var(--header-height);
-    }
 }
 
 #header a {
@@ -64,6 +63,48 @@
 
 .navLogoButton {
     background-color: inherit;
+}
+
+.headerWrapper .menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    width: 2.5rem;
+    height: 2rem;
+    margin-right: 2rem;
+}
+
+.headerWrapper .menu span{
+    height: 0.4rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    background-color: #8F95A3;
+}
+
+@media screen and (max-width: 1100px){
+    .headerWrapper {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .navBar:not(.open) {
+        display: none;
+    }
+
+    .navButton {
+        width: min-content;
+    }
+
+    .headerWrapper .menu {
+        display: flex;
+    }
 }
 
 /* #przyciski button{

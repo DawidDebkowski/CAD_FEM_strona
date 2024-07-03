@@ -18,8 +18,9 @@
     width: 40%;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
     .projectDiv img {
+        width: 100%;
         object-fit: cover;
     }
 }
