@@ -12,6 +12,7 @@ import Header from "./Components/MainHeader/Header.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import TestPage from "./Pages/TestPage.jsx";
 import AddPersonPage from "./Pages/AddPages/AddPersonPage.jsx";
+import ScrollToTop from "./Components/ScrollToTop.jsx";
 
 export const myRoutes = {
   "dom": "/dom",
@@ -43,6 +44,7 @@ export default function App() {
             <Route path="/addPerson" element={<AddPersonPage />} />
           </Routes>
         </div>
+        <ScrollToTop/>
         <Footer />
       </BrowserRouter>
     </div>
