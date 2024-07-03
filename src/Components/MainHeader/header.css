@@ -1,50 +1,49 @@
-/* F2F2F2 */
-
 #header {
     position: fixed;
     top: 0;
     z-index: 1030;
     width: 100%;
 }
+
 .headerWrapper {
     display: flex;
-    justify-content: left;
-    height: 80px;
+    height: var(--header-height);
     background-color: #1D3857;
 }
 
 .headerImage img {
     width: fit-content;
-    height: 80px;
+    height: var(--header-height);
 }
 
 .navBar {
     width: 100%;
     display: flex;
-    height: 80px;
+    height: var(--header-height);
     justify-content: center;
     align-items: center;
 }
 
 @media screen and (max-width: 600px){
     .navBar {
-        height: 80px;
+        height: var(--header-height);
     }
 }
 
 #header a {
-    color: white;
     text-decoration: inherit;
     text-align: center;
-    max-height: 80px;
+    max-height: var(--header-height);
     text-wrap: nowrap;
 }
 
 .navButton {
+    color: white;
     background-color: #1D3857;
-    transition-duration: 0.4s;
+    transition-duration: 0.25s;
     transition-property: all;
     width: 100%;
+    height: var(--header-height);
 
     border-radius: 8px;
     border: 1px solid transparent;
@@ -53,13 +52,18 @@
     font-weight: 500;
     font-family: inherit;
     cursor: pointer;
-    transition: border-color 0.25s;
 }
 
-.navButton:hover {
-    background-color: #C8C8C8;
-    border: 1px solid;
-    color: #1d3958;
+.navButton:hover:not(.active) {
+    background-color: #8F95A3;
+}
+
+.navButton.active {
+    background-color: #6E7687;
+}
+
+.navLogoButton {
+    background-color: inherit;
 }
 
 /* #przyciski button{

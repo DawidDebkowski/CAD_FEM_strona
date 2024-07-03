@@ -17,11 +17,12 @@
 .footerSiteName {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     color: white;
 }
 
 .footerLogoImage {
+    width: min-content;
     height: 80px;
     object-fit: contain;
 }

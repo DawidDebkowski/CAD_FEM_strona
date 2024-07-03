@@ -1,25 +1,25 @@
 import "./header.css"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { myRoutes } from "../../App"
 
 function Header() {
     return (
         <section id="header">
-            <div className="headerWrapper">
+            <nav className="headerWrapper">
                 <div className="headerImage">
-                    <Link to={"/Home"}>
+                    <NavLink to={"/Home"} className="navLogoButton">
                         <img src="/LOGO.png" alt="brak zdj logo" />
-                    </Link>
+                    </NavLink>
                 </div>
-                <nav className="navBar">
-                    <Link to={myRoutes.dom} className="navButton">Strona Główna</Link>
-                    <Link to={myRoutes.aktualnosci} className="navButton">Aktualności</Link>
-                    <Link to={myRoutes.projekty} className="navButton">Projekty</Link>
-                    <Link to={myRoutes.oNas} className="navButton">O Nas</Link>
-                    <Link to={myRoutes.sponsorzy} className="navButton">Sponsorzy</Link>
-                    <Link to={myRoutes.kontakt} className="navButton">Kontakt</Link>
-                </nav>
-            </div>
+                <div className="navBar">
+                    <NavLink to={myRoutes.dom} className="navButton">Strona Główna</NavLink>
+                    <NavLink to={myRoutes.aktualnosci} className="navButton">Aktualności</NavLink>
+                    <NavLink to={myRoutes.projekty} className="navButton">Projekty</NavLink>
+                    <NavLink to={myRoutes.oNas} className="navButton">O Nas</NavLink>
+                    <NavLink to={myRoutes.sponsorzy} className="navButton">Sponsorzy</NavLink>
+                    <NavLink to={myRoutes.kontakt} className="navButton">Kontakt</NavLink>
+                </div>
+            </nav>
         </section>
     )
 }

@@ -5,17 +5,19 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
+  background-color: #FBFBFE;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --header-height: 8vh;
 }
 
 body {
   margin: 0 0 0 0;
-  background-color: #f5f5f5;
+  background-color: #FBFBFE;
 }
 
 .appContainer {
