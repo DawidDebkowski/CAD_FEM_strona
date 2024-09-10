@@ -1,11 +1,12 @@
 import NewsHolder from "../../Components/NewsPage/NewsHolder";
 import "./newsPage.css"
-import { projects } from "../ProjectsPage";
+import json_project from "./../../assets/projects.json"
+
 
 export default function NewsPage() {
     return (
         <div className="newsPage">
-            <NewsHolder allNews={projects} />
+            <NewsHolder allNews={json_project} />
         </div>
     )
 }

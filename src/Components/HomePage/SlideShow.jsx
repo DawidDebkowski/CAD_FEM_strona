@@ -1,22 +1,30 @@
+import PropTypes from "prop-types"
 import { Fade } from 'react-slideshow-image'
 
-function SlideShow({ images }) {
+function SlideShow({ images, size }) {
+    const divArray = [];
+
+    for(var i=0;i<size;i++) {
+        divArray.push(
+            <div className='each-slide'>
+                <img src={images[i]}/>
+            </div>
+        )
+    }
+
     return (
         <div className="slideshow-container">
             <Fade>
-                <div className="each-slide">
-                    <img src='LOGO.png' />
-                </div>
-                <div className="each-slide">
-                    <img src='szerokiMechanik.png' />
-                </div>
-                <div className="each-slide">
-                    <img src='person.png' />
-                </div>
+                {divArray}
             </Fade>
         </div>
     );
-};
+}
+
+SlideShow.propTypes = {
+  images: PropTypes.array,
+  size: PropTypes.number
+}
 
 export default SlideShow;
 

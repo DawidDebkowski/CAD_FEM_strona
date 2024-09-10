@@ -8,16 +8,15 @@ section{
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 400px;
+  height: 50vh;
 }
 
-.each-slide>div {
+.each-slide {
   padding: auto;
 }
 
-.each-slide>div img {
+.each-slide img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 

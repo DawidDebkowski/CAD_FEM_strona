@@ -1,0 +1,45 @@
+.contactPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--header-height);
+}
+
+.contactInfoBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4485cf;
+    margin: 1%;
+    padding: 3rem;
+    border-radius: 45px;
+}
+
+.contactPage h1 {
+    text-wrap: nowrap;
+    font-size: xxx-large;
+    margin-top: 0.33rem;
+}
+
+.contactText {
+    text-decoration:underline;
+    color: black;
+    font-size: xx-large;
+    text-wrap: nowrap;
+    padding-right: 2rem;
+    margin: 0;
+}
+
+.instagramLink:hover {
+    color: #e94475;
+} 
+
+.contactBox {
+    display: flex;
+    align-items: center;
+}
+
+.contactBoxIcon {
+    height: 100px;
+    width: 200px;
+}
