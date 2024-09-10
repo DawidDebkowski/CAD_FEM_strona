@@ -1,5 +1,7 @@
 import PropTypes from "prop-types"
 import "./singlePost.css"
+import PPHolder from "./PPHolder"
+import paragraphs from "./../../assets/paragraphs.json"
 
 export default function SinglePost({project}) {
     return (
@@ -18,6 +20,7 @@ export default function SinglePost({project}) {
                 <p className="singlePostDesc">
                     {project.text}
                 </p>
+                <PPHolder paragraphs={paragraphs}/>
             </div>
         </div>
     )
