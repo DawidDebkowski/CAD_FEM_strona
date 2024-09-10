@@ -6,7 +6,7 @@ import HomePage from "./Pages/HomePage.jsx";
 import ProjectsPage from "./Pages/ProjectsPage.jsx";
 import SponsorPage from "./Pages/SponsorPage.jsx";
 import NewsPage from "./Pages/NewsPage/NewsPage.jsx";
-import ContactPage from "./Pages/ContactPage.jsx";
+import ContactPage from "./Pages/ContactPage/ContactPage.jsx";
 import SinglePostPage from "./Pages/SinglePostPage.jsx";
 import Header from "./Components/MainHeader/Header.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
