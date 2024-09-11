@@ -13,6 +13,7 @@ import Footer from "./Components/Footer/Footer.jsx";
 import TestPage from "./Pages/TestPage.jsx";
 import AddPersonPage from "./Pages/AddPages/AddPersonPage.jsx";
 import ScrollToTop from "./Components/ScrollToTop.jsx";
+import 'react-photo-view/dist/react-photo-view.css';
 
 export const myRoutes = {
   "dom": "/dom",

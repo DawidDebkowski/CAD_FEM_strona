@@ -6,7 +6,7 @@ export default function PPHolder({ paragraphs, alternating = false }) {
     let paragraphList = [];
     let side = false;
     paragraphs.forEach(paragraph => {
-        paragraphList.push(<PP imageDesc={paragraph.imageDesc} image={paragraph.image} desc={paragraph.desc} isRight={side} />)
+        paragraphList.push(<PP key={paragraph.key} imageDesc={paragraph.imageDesc} image={paragraph.image} desc={paragraph.desc} isRight={side} />)
         if (alternating) {
             side = !side;
         }
@@ -19,7 +19,5 @@ export default function PPHolder({ paragraphs, alternating = false }) {
 }
 PPHolder.propTypes = {
     alternating: PropTypes.bool,
-    paragraphs: PropTypes.shape({
-        forEach: PropTypes.func
-    })
+    paragraphs: PropTypes.array
 }

@@ -4,14 +4,13 @@ import "./photoGallery.css"
 
 function PhotoGallery({images}) {
     let maxNumber = 4;
-    console.log(images);
-    
+
     return (
         <PhotoProvider>
             <div className="photoGalleryBox">
-                {images.map((index, src) => (
-                    <PhotoView key={index} src={src}>
-                        <img src={src} alt="" className={index > maxNumber ? "" : "hiddenPhoto"} />
+                {images.map((image) => (
+                    <PhotoView key={image.key} src={image.src}>
+                        <img src={image.src} alt="" className={"galleryImage " + ((image.key < maxNumber) ? "" : "hiddenPhoto")} />
                     </PhotoView>
                 ))}
             </div>

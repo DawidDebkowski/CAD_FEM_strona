@@ -1,3 +1,20 @@
 .hiddenPhoto {
     display: none;
 }
+
+.photoGalleryBox {
+    display: flex;
+    height: 30rem;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-content: center;
+    justify-content: center;
+}
+
+.galleryImage {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+}

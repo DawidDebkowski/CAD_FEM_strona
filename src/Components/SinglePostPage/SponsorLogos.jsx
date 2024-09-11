@@ -12,7 +12,7 @@ function SponsorLogos() {
     let logoWheel = [];
     sponsorMock.forEach(sponsor => {
         logoWheel.push((
-            <img src={sponsor.imagePath} className="sponsorLogo"/>
+            <img key={sponsor.key} src={sponsor.imagePath} className="sponsorLogo"/>
         ))
     });
     return ( 
