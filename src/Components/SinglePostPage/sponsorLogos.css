@@ -2,3 +2,20 @@
     width: 10rem;
     height: 10rem;
 }
+
+.sponsorBox {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sponsorBox h2 {
+    margin-bottom: 0rem;
+}
+
+.sponsorLogosBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+}

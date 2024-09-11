@@ -3,6 +3,12 @@
     background-color: rgb(255, 255, 255);
 }
 
+@media screen and (max-width: 800px){
+    .singlePost{
+        width: 90%;
+    }
+}
+
 .singlePostWrapper {
     padding: 20px;
 }

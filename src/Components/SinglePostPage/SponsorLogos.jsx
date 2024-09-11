@@ -16,9 +16,11 @@ function SponsorLogos() {
         ))
     });
     return ( 
-        <div className="sponsorLogosBox">
-            <h2>Sponsorzy:</h2>
-            {logoWheel}
+        <div className="sponsorBox">
+            <h2>Sponsorzy</h2>
+            <div className="sponsorLogosBox">
+                {logoWheel}
+            </div>
         </div>
      );
 }

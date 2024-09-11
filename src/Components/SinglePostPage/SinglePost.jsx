@@ -36,6 +36,9 @@ export default function SinglePost({ project }) {
                          Nulla varius elementum massa, non u
                     </p>
                 </div>
+                <div className="spPhotoWheel">
+                    
+                </div>
             </div>
         </div>
     )
