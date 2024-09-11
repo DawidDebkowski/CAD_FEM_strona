@@ -22,7 +22,7 @@ export default function SinglePost({project}) {
                     {project.mainDesc}
                 </p>
                 <PPHolder paragraphs={paragraphs} alternating={true}/>
-                <p>
+                <p className="singlePostCoop">
                     Projekt wykonany we współpracy z kołem naukowym Kompozytywni.
                 </p>
                 <SponsorLogos/>
