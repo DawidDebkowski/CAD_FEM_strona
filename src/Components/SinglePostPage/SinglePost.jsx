@@ -9,18 +9,18 @@ export default function SinglePost({project}) {
             <div className="singlePostWrapper">
                 <img src="/mechanicy.png" alt="głowne zdjęcie postu" className="singlePostImg"/>
                 <h1 className="singlePostTitle">{project.title}</h1>
-                <div className="singlePostInfo">
+                {/* <div className="singlePostInfo">
                     <span className="singlePostAuthor">
                         Autor: <b>{project.author}</b>
                     </span>
                     <span className="singlePostDate">
                         {project.date}
                     </span>
-                </div>
+                </div> */}
                 <p className="singlePostDesc">
-                    {project.text}
+                    Prosty opis jakiś krótki podobno ale nie wiem jak krótki pewnie tak jest okej.
                 </p>
-                <PPHolder paragraphs={paragraphs}/>
+                <PPHolder paragraphs={paragraphs} alternating={true}/>
             </div>
         </div>
     )

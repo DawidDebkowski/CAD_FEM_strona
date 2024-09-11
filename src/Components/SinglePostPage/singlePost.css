@@ -1,5 +1,6 @@
 .singlePost {
     width: 70%;
+    background-color: rgb(255, 255, 255);
 }
 
 .singlePostWrapper {
@@ -29,6 +30,7 @@
 .singlePostDesc {
     font-size: large;
     line-height: 25px;
+    text-align: justify;
 }
 
 .singlePostDesc::first-letter {

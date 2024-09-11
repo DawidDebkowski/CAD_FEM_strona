@@ -1,18 +1,29 @@
-function PP({ imageDesc, image, desc, isRight = false }) {
-    let baseDirection = "left";
+import PropTypes from "prop-types"
+import "./ppHolder.css"
+
+export default function PP({ imageDesc, image, desc, isRight = false }) {
+    let baseDirection = " left";
     if (isRight) {
-        baseDirection = "right"
+        baseDirection = " right"
     }
 
     return (
-        <div className={"projectDiv "}>
-            <img className={baseDirection} src={image} />
+        <div className={"ppDiv "}>
+            <div className={"ppImageBox" + baseDirection}>
+                <img src={image} />
+                <p>Jednozdaniowy opis i fajnie</p>
+            </div>
 
-            <div className="description">
+            <div className="ppDescription singlePostDesc">
                 <p>{desc}</p>
             </div>
         </div>
     )
 }
 
-export default PP;
+PP.propTypes = {
+  desc: PropTypes.string,
+  image: PropTypes.string,
+  imageDesc: PropTypes.string,
+  isRight: PropTypes.bool
+}

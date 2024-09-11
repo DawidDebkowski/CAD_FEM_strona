@@ -1,0 +1,39 @@
+.ppDiv{
+    height: 100%;
+}
+
+.left {
+    float: left;
+    margin-right: 1rem;
+}
+
+.right {
+    float: right;
+    margin-left: 1rem;
+}
+
+.ppDiv img{
+    width: 100%;
+    margin-top: 1rem;
+    /* object-fit: cover;
+    max-height: 9rem; */
+}
+
+.ppImageBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+    height: 100%;
+}
+
+.ppImageBox p {
+    margin-top: 0.33rem;
+}
+
+@media screen and (max-width: 800px){
+    .projectDiv img {
+        width: 100%;
+        object-fit: cover;
+    }
+}

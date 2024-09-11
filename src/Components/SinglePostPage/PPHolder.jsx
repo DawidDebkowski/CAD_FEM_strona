@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import PP from "./PP.jsx";
+import "./ppHolder.css"
 
 export default function PPHolder({ paragraphs, alternating = false }) {
     let paragraphList = [];
