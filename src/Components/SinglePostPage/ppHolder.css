@@ -27,6 +27,18 @@
     height: 100%;
 }
 
+.ppDescription {
+    font-size: large;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.ppDescription::first-letter {
+    margin-left: 20px;
+    font-size: x-large;
+    font-weight: 600;
+}
+
 .ppImageBox p {
     margin-top: 0.33rem;
 }

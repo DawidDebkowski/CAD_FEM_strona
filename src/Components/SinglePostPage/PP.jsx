@@ -14,7 +14,7 @@ export default function PP({ imageDesc, image, desc, isRight = false }) {
                 <p>Jednozdaniowy opis i fajnie</p>
             </div>
 
-            <div className="ppDescription singlePostDesc">
+            <div className="ppDescription">
                 <p>{desc}</p>
             </div>
         </div>
