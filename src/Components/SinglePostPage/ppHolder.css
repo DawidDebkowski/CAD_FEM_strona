@@ -1,3 +1,8 @@
+.ppHolder {
+    display: flex;
+    flex-direction: column;
+}
+
 .ppDiv{
     height: 100%;
 }
