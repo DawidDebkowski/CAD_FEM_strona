@@ -3,6 +3,7 @@ import "./singlePost.css"
 import PPHolder from "./PPHolder"
 import paragraphs from "./../../assets/paragraphs.json"
 import SponsorLogos from "./SponsorLogos"
+import PhotoGallery from "./PhotoGallery"
 
 export default function SinglePost({ project }) {
     return (
@@ -36,9 +37,7 @@ export default function SinglePost({ project }) {
                          Nulla varius elementum massa, non u
                     </p>
                 </div>
-                <div className="spPhotoWheel">
-                    
-                </div>
+                <PhotoGallery images={project.moreImages}/>
             </div>
         </div>
     )
@@ -50,7 +49,8 @@ SinglePost.propTypes = {
         mainDesc: PropTypes.string,
         date: PropTypes.string,
         text: PropTypes.string,
-        title: PropTypes.string
+        title: PropTypes.string,
+        moreImages: PropTypes.array
     })
 }
 

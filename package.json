@@ -13,6 +13,7 @@
     "axios": "^1.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-photo-view": "^1.2.6",
     "react-router-dom": "^6.22.3",
     "react-slideshow-image": "^4.3.1",
     "react-social-icons": "^6.18.0",
