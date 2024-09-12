@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    cursor: pointer;
     width: 40%;
     height: 100%;
 }

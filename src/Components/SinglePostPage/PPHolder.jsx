@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import PP from "./PP.jsx";
 import "./ppHolder.css"
+import { PhotoProvider } from "react-photo-view";
 
 export default function PPHolder({ paragraphs, alternating = false }) {
     let paragraphList = [];
@@ -13,7 +14,9 @@ export default function PPHolder({ paragraphs, alternating = false }) {
     });
     return (
         <div className="ppHolder">
-            {paragraphList}
+            <PhotoProvider>
+                {paragraphList}
+            </PhotoProvider>
         </div>
     )
 }
