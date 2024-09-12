@@ -11,6 +11,15 @@
 
     align-content: center;
     justify-content: center;
+    --photo-height: 200px;
+    --photo-width: 300px;
+}
+
+@media screen and (max-width: 700px) {
+    .photoGalleryBox {
+        --photo-height: 200px;
+        --photo-width: 200px;
+    }
 }
 
 .greyWrapper {
@@ -21,35 +30,35 @@
     position: relative; 
 }
 
-.greyWrapper.lastPhoto {
-    background-color: #00000056;
-}
-
-
 .galleryTextWrapper {
     position: absolute;
-    display: none;
-    background-color: #00000056;
     color: white;
     opacity: 0.9;
     top: 0;
-    height: 200px;
-    width: 300px;
+    height: var(--photo-height);
+    width: var(--photo-width);
+}
+
+.galleryTextWrapper.lastPhoto {
+    display: block;
+    background-color: #00000096;
 }
 
 .galleryTextWrapper:hover {
+    display: block;
+    background-color: #00000056;
+    cursor:pointer;
+}
+
+.galleryTextWrapper.lastPhoto:hover {
     display: block;
     background-color: #000000bd;
     cursor:pointer;
 }
 
-.lastPhoto {
-    display: block;
-}
-
 .galleryImage {
-    height: 200px;
-    width: 300px;
+    height: var(--photo-height);
+    width: var(--photo-width);
     object-fit: cover;
 }
 
