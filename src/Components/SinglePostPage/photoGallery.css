@@ -9,8 +9,9 @@
 
 .photoGalleryBox {
     display: flex;
-    height: calc(var(--photo-height) * 2);
+    height: calc(var(--photo-height) * 2 + 15px);
     width: 100%;
+    gap: 15px;
     flex-direction: column;
     flex-wrap: wrap;
 
