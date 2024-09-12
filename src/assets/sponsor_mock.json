@@ -2,11 +2,11 @@
     {
         "key": 0,
         "name": "Red Bull",
-        "imagePath": "/src/assets/zdjecia/redbullMock.jpg"
+        "imagePath": "/zdjecia/redbullMock.jpg"
     },
     {
         "key": 1,
         "name": "Red Bull2",
-        "imagePath": "/src/assets/zdjecia/redbullMock2.jpg"
+        "imagePath": "/zdjecia/redbullMock2.jpg"
     }
 ]
