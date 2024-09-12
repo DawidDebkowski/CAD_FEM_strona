@@ -5,20 +5,29 @@ import "./photoGallery.css"
 function PhotoGallery({ images }) {
     let maxNumber = 4;
 
+    function buildImage(image) {
+        let lastPhoto = ((image.key == maxNumber - 1) ? " lastPhoto" : "");
+        let hiddenPhoto = ((image.key < maxNumber) ? "" : " hiddenPhoto");
+        let lastPhotoText = ((image.key == maxNumber - 1) ? " lastPhotoText" : "");
+
+        return (
+            <PhotoView key={image.key} src={image.src}>
+                <div className={"greyWrapper" + lastPhoto}>
+                    <img src={image.src} alt="" className={"galleryImage" + hiddenPhoto + lastPhoto} />
+                    <div className={"galleryTextWrapper" + hiddenPhoto + lastPhoto}>
+                        {/* <p>Zobacz więcej zdjęć</p> */}
+                        <h1 className={"morePhotosDisplay" + hiddenPhoto + lastPhotoText}>+4</h1>
+                    </div>
+                </div>
+            </PhotoView>
+        )
+    }
+
+
     return (
         <PhotoProvider>
             <div className="photoGalleryBox">
-                {images.map((image) => (
-                    <PhotoView key={image.key} src={image.src}>
-                        <div className={"greyWrapper " + ((image.key == maxNumber - 1) ? "lastPhoto" : "")}>
-                            <img src={image.src} alt="" className={"galleryImage " + ((image.key < maxNumber) ? "" : "hiddenPhoto") + ((image.key == maxNumber - 1) ? "lastPhoto" : "")} />
-                            <div className={"galleryTextWrapper " + ((image.key < maxNumber) ? "" : "hiddenPhoto") + ((image.key == maxNumber - 1) ? " lastPhoto" : "")}>
-                                {/* <p>Zobacz więcej zdjęć</p> */}
-                                <h1 className={"morePhotosDisplay " + ((image.key < maxNumber) ? "" : "hiddenPhoto ") + ((image.key == maxNumber - 1) ? "lastPhotoText" : "")}>+4</h1>
-                            </div>
-                        </div>
-                    </PhotoView>
-                ))}
+                {images.map(buildImage)}
             </div>
         </PhotoProvider>
     );
