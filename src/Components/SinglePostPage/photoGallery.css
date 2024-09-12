@@ -13,8 +13,56 @@
     justify-content: center;
 }
 
+.greyWrapper {
+    margin: 0px;
+    padding: 0px;
+    height: 200px;
+    width: fit-content;   
+    position: relative; 
+}
+
+.greyWrapper.lastPhoto {
+    background-color: #00000056;
+}
+
+
+.galleryTextWrapper {
+    position: absolute;
+    display: none;
+    background-color: #00000056;
+    color: white;
+    opacity: 0.9;
+    top: 0;
+    height: 200px;
+    width: 300px;
+}
+
+.galleryTextWrapper:hover {
+    display: block;
+    background-color: #000000bd;
+    cursor:pointer;
+}
+
+.lastPhoto {
+    display: block;
+}
+
 .galleryImage {
     height: 200px;
     width: 300px;
     object-fit: cover;
+}
+
+.morePhotosDisplay {
+    position: absolute;
+    display: none;
+}
+
+.lastPhotoText {
+    font-size: 5rem;
+    bottom: 6%;
+    left: 25%;
+    display: inherit;
+    opacity: 1.0;
+    text-align: center;
 }
