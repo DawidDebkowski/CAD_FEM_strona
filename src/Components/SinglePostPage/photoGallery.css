@@ -2,9 +2,14 @@
     display: none;
 }
 
+.photoGalleryWrapper {
+    text-align: center;
+    margin-top: 5%;
+}
+
 .photoGalleryBox {
     display: flex;
-    height: 30rem;
+    height: calc(var(--photo-height) * 2);
     width: 100%;
     flex-direction: column;
     flex-wrap: wrap;

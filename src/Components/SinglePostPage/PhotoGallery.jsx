@@ -26,8 +26,11 @@ function PhotoGallery({ images }) {
 
     return (
         <PhotoProvider>
-            <div className="photoGalleryBox">
-                {images.map(buildImage)}
+            <div className="photoGalleryWrapper">
+                <h2>Galeria</h2>
+                <div className="photoGalleryBox">
+                    {images.map(buildImage)}
+                </div>
             </div>
         </PhotoProvider>
     );
