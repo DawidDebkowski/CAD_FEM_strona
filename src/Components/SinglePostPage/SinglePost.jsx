@@ -22,7 +22,7 @@ export default function SinglePost({ project }) {
                 <p className="singlePostDesc">
                     {project.mainDesc}
                 </p>
-                <PPHolder paragraphs={paragraphs} alternating={true} />
+                <PPHolder paragraphs={project.paragraphs} alternating={true} />
                 <p className="singlePostCoop">
                     Projekt wykonany we współpracy z kołem naukowym Kompozytywni.
                 </p>
@@ -50,7 +50,8 @@ SinglePost.propTypes = {
         date: PropTypes.string,
         text: PropTypes.string,
         title: PropTypes.string,
-        moreImages: PropTypes.array
+        moreImages: PropTypes.array,
+        paragraphs: PropTypes.string
     })
 }
 
