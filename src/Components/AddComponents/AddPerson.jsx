@@ -5,10 +5,10 @@ import "./addPerson.css";
 function AddPerson() {
     const [formData, setFormData] = useState({
         fname: '',
-        lname: '',
-        desc: '',
-        dep: 'Zarząd',
-        pic: null
+        second_name: '',
+        descr: '',
+        department: 'Zarząd',
+        image_path: null
     });
     const [response, setResponse] = useState(null);
 
@@ -23,7 +23,7 @@ function AddPerson() {
     const handleFileChange = (e) => {
         setFormData({
             ...formData,
-            pic: e.target.files[0]
+            image: e.target.files[0]
         });
     };
 
@@ -35,13 +35,13 @@ function AddPerson() {
             form.append(key, formData[key]);
         }
 
-        axios.post("http://localhost/website/", form)
+        axios.post("http://localhost/cadfemapi/addPerson/", form)
             .then((response) => {
                 setResponse(response.data);
                 
             })
             .catch((error) => {
-                setResponse(`Error: ${error.message}, ${error.file}, ${error.line}`);
+                setResponse(`Error: ${JSON.stringify(error)} ${error.message}, ${error.file}, ${error.line}`);
             });
     };
 
@@ -61,27 +61,27 @@ function AddPerson() {
 
                     <label>Nazwisko: </label><br />
                     <input
-                        name="lname"
+                        name="second_name"
                         className="addPersonInput"
                         type="text"
-                        value={formData.lname}
+                        value={formData.second_name}
                         onChange={handleChange}
                     /><br />
 
                     <label>Krótki opis: </label><br />
                     <input
-                        name="desc"
+                        name="descr"
                         className="addPersonInput"
                         type="text"
-                        value={formData.desc}
+                        value={formData.descr}
                         onChange={handleChange}
                     /><br />
 
                     <label htmlFor="department">Wybierz dział: </label><br />
                     <select
-                        name="dep"
+                        name="department"
                         id="department"
-                        value={formData.dep}
+                        value={formData.department}
                         onChange={handleChange}
                     >
                         <option value="Zarząd">Zarząd</option>
@@ -91,11 +91,11 @@ function AddPerson() {
                     </select>
 
                     <br /><br />
-                    <label htmlFor="photo">Wybierz zdjęcie: </label> <br />
+                    <label htmlFor="image_path">Wybierz zdjęcie: </label> <br />
                     <input
                         type="file"
-                        id="photo"
-                        name="pic"
+                        id="image_path"
+                        name="image_path"
                         onChange={handleFileChange}
                     />
 
@@ -103,7 +103,7 @@ function AddPerson() {
                     <button type="submit">Submit</button>
                 </fieldset>
             </form>
-            {response && <div className="response">{response}</div>}
+            {response && <div className="response">{JSON.stringify(response)}</div>}
         </div>
     );
 }
