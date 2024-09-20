@@ -1,6 +1,16 @@
 import Person from "./Person";
 import "./people.css"
 
+/*
+{"id":1,
+"fname":"Dawid",
+"second_name":"D\u0119bkowski",
+"department":"Informatyk",
+"descr":"Zrobi\u0142 strone",
+"image_path":"\/zdjecia\/osoby\/dawiddebkowski.png"},
+*/
+
+
 function DepartmentRow({ name }) {
     console.log(name)
     return (
@@ -18,7 +28,7 @@ function DepartmentDiv({ depName, peopleList }) {
     peopleList.forEach(person => {
         console.log(person.department)
         rows.push(
-            <Person name={person.name} lastName={person.lastName} imageSource={person.imageSource} description={person.description} />
+            <Person key={person.id} name={person.fname} lastName={person.second_name} imageSource={person.image_path} description={person.descr} />
         )
     });
     return (
@@ -49,7 +59,7 @@ function People({ peopleList }) {
                     departmentList.push(person2);
                 }
             });
-            rows.push(<DepartmentDiv depName={person.department} peopleList={departmentList} />);
+            rows.push(<DepartmentDiv key={person.id} depName={person.department} peopleList={departmentList} />);
             departments.push(person.department)
         }
     });

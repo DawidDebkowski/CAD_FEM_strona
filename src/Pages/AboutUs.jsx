@@ -2,6 +2,8 @@ import React from 'react'
 import "../index.css"
 import People from '../Components/AboutUsPage/People.jsx'
 import MainPhoto from '../Components/AboutUsPage/MainPhoto.jsx'
+import axios from 'axios'
+import { useState, useEffect } from "react";
 
 const people = [
   {
@@ -29,10 +31,21 @@ const people = [
 
 export default function AboutUs()
 {
+    const [response, setResponse] = useState(null);
+
+    useEffect(()=>{
+        axios.get("http://localhost/cadfemapi/addPerson/")
+        .then((serverResponse) => {
+            //callback function?
+            setResponse(serverResponse.data);
+        })
+    }, [])
+
+
     return (
       <React.StrictMode>
         <MainPhoto></MainPhoto>
-        <People peopleList={people}/>
+        {response && <People peopleList={response}/>}
       </React.StrictMode>
     )
 }
