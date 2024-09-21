@@ -1,14 +1,33 @@
 import { useState } from "react";
 import axios from "axios";
 import "./addPerson.css";
+import { useLocation } from "react-router-dom";
 
-function AddPerson() {
-    const [formData, setFormData] = useState({
+function AddPerson(props) {
+    const location = useLocation();
+
+    let isEdit = false;
+    let person = {
+        id: 0,
         fname: '',
         second_name: '',
         descr: '',
         department: 'Zarząd',
         image_path: null
+    }
+
+    if (location.state?.person != null) {
+        person = location.state.person;
+        isEdit = true;
+    }
+
+    const [formData, setFormData] = useState({
+        id: person.id,
+        fname: person.fname,
+        second_name: person.second_name,
+        descr: person.descr,
+        department: person.department,
+        image_path: person.image_path
     });
     const [response, setResponse] = useState(null);
 
@@ -29,27 +48,38 @@ function AddPerson() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         const form = new FormData();
         for (const key in formData) {
             form.append(key, formData[key]);
         }
 
-        axios.post(import.meta.env.VITE_API_LINK + "/cadfemapi/addPerson/", form)
-            .then((response) => {
-                setResponse(response.data);
-                
-            })
-            .catch((error) => {
-                setResponse(`Error: ${JSON.stringify(error)} ${error.message}, ${error.file}, ${error.line}`);
-            });
+        const API_LINK = import.meta.env.VITE_API_LINK + "/cadfemapi/addPerson/";
+
+        if (isEdit) {
+            axios.patch(API_LINK, form)
+                .then((response) => {
+                    setResponse(response.data);
+                })
+                .catch((error) => {
+                    setResponse(`Error: ${error.message}, ${error.file}, ${error.line}`);
+                });
+        } else {
+            axios.post(API_LINK, form)
+                .then((response) => {
+                    setResponse(response.data);
+                })
+                .catch((error) => {
+                    setResponse(`Error: ${error.message}, ${error.file}, ${error.line}`);
+                });
+        }
     };
 
     return (
         <div className="addPerson">
             <form onSubmit={handleSubmit}>
                 <fieldset>
-                    <legend>{"Dodaj osobę"+ API_LINK}</legend>
+                    <legend>{isEdit ? "Edytuj osobę" : "Dodaj osobę"}</legend>
                     <label>Imie: </label><br />
                     <input
                         name="fname"
@@ -69,12 +99,13 @@ function AddPerson() {
                     /><br />
 
                     <label>Krótki opis: </label><br />
-                    <input
+                    <textarea
                         name="descr"
                         className="addPersonInput"
                         type="text"
                         value={formData.descr}
                         onChange={handleChange}
+                        size={50}
                     /><br />
 
                     <label htmlFor="department">Wybierz dział: </label><br />
@@ -91,7 +122,7 @@ function AddPerson() {
                     </select>
 
                     <br /><br />
-                    <label htmlFor="image_path">Wybierz zdjęcie: </label> <br />
+                    <label htmlFor="image_path">{!isEdit ? "Wybierz zdjęcie:" : "Jeżeli nie chcesz zmieniać zdjęcia, nie wgrywaj nowego pliku."}</label> <br />
                     <input
                         type="file"
                         id="image_path"
@@ -99,7 +130,7 @@ function AddPerson() {
                         onChange={handleFileChange}
                     />
 
-                    <br/><br/>
+                    <br /><br />
                     <button type="submit">Submit</button>
                 </fieldset>
             </form>

@@ -1,0 +1,20 @@
+.adminPage {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    flex-direction: column;
+    font-size: xx-large;
+}
+
+.adminPage .round {
+    border-radius: 100px;
+}
+
+.adminPage .bigger {
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    max-height: fit-content;
+}

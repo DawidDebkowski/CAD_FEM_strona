@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Person from "./Person";
 import "./people.css"
 
@@ -23,12 +24,15 @@ function DepartmentRow({ name }) {
     )
 }
 
-function DepartmentDiv({ depName, peopleList }) {
+function DepartmentDiv({ depName, peopleList, isAdmin=false }) {
     const rows = []
     peopleList.forEach(person => {
         console.log(person.department)
         rows.push(
-            <Person key={person.id} name={person.fname} lastName={person.second_name} imageSource={person.image_path} description={person.descr} />
+            <>
+                <Person key={person.id} name={person.fname} lastName={person.second_name} imageSource={person.image_path} description={person.descr} />
+                {isAdmin==true ? ( <Link state={{person: person}} to={{pathname:"/addPerson", state: {person}}}>EDYTUJ</Link>) : <></>}
+            </>
         )
     });
     return (
@@ -45,21 +49,20 @@ function DepartmentDiv({ depName, peopleList }) {
     )
 }
 
-function People({ peopleList }) {
+function People({ peopleList, isAdmin = false }) {
     console.log("Wywolanie people");
     const departments = []
     const rows = []
     peopleList.forEach(person => {
+        //dealing with departments
         if (!departments.includes(person.department)) {
-            console.log(person)
             const departmentList = [];
             peopleList.forEach(person2 => {
                 if (person2.department == person.department) {
-                    console.log(person)
                     departmentList.push(person2);
                 }
             });
-            rows.push(<DepartmentDiv key={person.id} depName={person.department} peopleList={departmentList} />);
+            rows.push(<DepartmentDiv isAdmin={isAdmin} key={person.id} depName={person.department} peopleList={departmentList} />);
             departments.push(person.department)
         }
     });
