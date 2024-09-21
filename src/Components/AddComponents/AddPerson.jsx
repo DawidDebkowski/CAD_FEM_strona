@@ -35,7 +35,7 @@ function AddPerson() {
             form.append(key, formData[key]);
         }
 
-        axios.post("http://localhost/cadfemapi/addPerson/", form)
+        axios.post(import.meta.env.VITE_API_LINK + "/cadfemapi/addPerson/", form)
             .then((response) => {
                 setResponse(response.data);
                 
@@ -49,7 +49,7 @@ function AddPerson() {
         <div className="addPerson">
             <form onSubmit={handleSubmit}>
                 <fieldset>
-                    <legend>Dodaj osobę</legend>
+                    <legend>{"Dodaj osobę"+ API_LINK}</legend>
                     <label>Imie: </label><br />
                     <input
                         name="fname"

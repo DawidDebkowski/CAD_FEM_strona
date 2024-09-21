@@ -32,9 +32,9 @@ const people = [
 export default function AboutUs()
 {
     const [response, setResponse] = useState(null);
-
+    console.log(import.meta.env.VITE_API_LINK.concat("/cadfemapi/addPerson/"));
     useEffect(()=>{
-        axios.get("http://localhost/cadfemapi/addPerson/")
+        axios.get(import.meta.env.VITE_API_LINK.concat("/cadfemapi/addPerson/"))
         .then((serverResponse) => {
             //callback function?
             setResponse(serverResponse.data);

@@ -6,7 +6,7 @@ function SlideShow({ images, size }) {
 
     for(var i=0;i<size;i++) {
         divArray.push(
-            <div className='each-slide'>
+            <div key={i} className='each-slide'>
                 <img src={images[i]}/>
             </div>
         )

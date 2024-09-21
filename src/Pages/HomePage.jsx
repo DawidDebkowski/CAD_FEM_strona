@@ -8,6 +8,7 @@ const images = [
 ];
 
 export default function HomePage() {
+    console.log(import.meta.env.VITE_API_LINK);
     //window.location.href = "/home.html";
     return (
         <>
