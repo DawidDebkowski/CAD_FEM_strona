@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Person from "./Person";
 import "./people.css"
+import { myRoutes } from "../../App";
 
 /*
 {"id":1,
@@ -31,7 +32,8 @@ function DepartmentDiv({ depName, peopleList, isAdmin=false }) {
         rows.push(
             <>
                 <Person key={person.id} name={person.fname} lastName={person.second_name} imageSource={person.image_path} description={person.descr} />
-                {isAdmin==true ? ( <Link state={{person: person}} to={{pathname:"/addPerson", state: {person}}}>EDYTUJ</Link>) : <></>}
+                {isAdmin==true ? ( <Link state={{person: person}} to={{pathname:myRoutes.addPerson, state: {person}}}>EDYTUJ</Link>) : <></>}
+                {isAdmin==true ? ( <Link state={{person: person}} to={{pathname:myRoutes.removeMemberPage, state: {person}}}>USUŃ</Link>) : <></>}
             </>
         )
     });

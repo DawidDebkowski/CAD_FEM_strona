@@ -42,7 +42,8 @@ function AddPerson(props) {
     const handleFileChange = (e) => {
         setFormData({
             ...formData,
-            image: e.target.files[0]
+            image: e.target.files[0],
+            image_path: "new file",
         });
     };
 
