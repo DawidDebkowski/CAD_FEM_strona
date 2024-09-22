@@ -57,7 +57,7 @@ function AddPerson(props) {
         const API_LINK = import.meta.env.VITE_API_LINK + "/cadfemapi/addPerson/";
 
         if (isEdit) {
-            axios.patch(API_LINK, form)
+            axios.post(API_LINK + person.id.toString(), form)
                 .then((response) => {
                     setResponse(response.data);
                 })
