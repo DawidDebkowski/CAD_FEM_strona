@@ -17,6 +17,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 import AdminLinkPage from "./Pages/AdminLinkPage.jsx";
 import EditMembersPage from "./Pages/EditPages/EditMembersPage.jsx";
 import RemoveMemberPage from "./Pages/RemovePage/RemoveMemberPage.jsx";
+import AddArticlePage from "./Pages/AddPages/AddArticlePage.jsx";
 
 export const myRoutes = {
   "dom": "/dom",
@@ -28,6 +29,7 @@ export const myRoutes = {
   "addPerson": "/addPerson",
   "editMembersPage": "/editMembersPage",
   "removeMemberPage": "/removeMemberPage",
+  "addArticlePage": "/addArticlePage",
 }
 
 export default function App() {
@@ -52,6 +54,7 @@ export default function App() {
             <Route path="/adminPage" element={<AdminLinkPage />} />
             <Route path="/editMembersPage" element={<EditMembersPage />} />
             <Route path="/removeMemberPage" element={<RemoveMemberPage />} />
+            <Route path="/addArticlePage" element={<AddArticlePage />} />
           </Routes>
         </div>
         <ScrollToTop/>
