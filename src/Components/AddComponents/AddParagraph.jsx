@@ -1,10 +1,10 @@
-function AddParagraph({id, handleChange, handleFileChange}) {
+function AddParagraph({id, handleChange, handleFileChange, isEdit}) {
     return (
         <div className="addParagraphInput">
-            <label>Akapit 1: </label><br />
+            <label>Akapit {id.toString()}: </label><br />
             <textarea
                 id={id.toString()}
-                name={"paragraph"}
+                name={"desc"}
                 className="addParagraphInput"
                 type="text"
                 onChange={handleChange}

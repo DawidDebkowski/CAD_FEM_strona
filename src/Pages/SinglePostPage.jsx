@@ -57,7 +57,7 @@ export default function SinglePostPage() {
                 "desc": "Naszym pierwszym zadaniem było zaprojektowanie lotni oraz stworzenie jej modelu 3D w programie Inventor. Przez nasze głowy przechodziło wiele pomysłów, zdecydowaliśmy się jednak na koncepcję dużej lotni pozwalającej na wytworzenie znacznej siły nośnej podczas lotu. Ten właśnie pomysł przekuliśmy w rzeczywisty prototyp lotni. Gigant mający prawie 10 metrów rozpiętości skrzydeł po raz pierwszy został podniesiony na wózek na kilka dni przed planowanym wyjazdem do Gdyni."
             },
             {
-                "key": 3,
+                "key": 3, //image_path and image_desc
                 "imageDesc": "Podstawa Lotni",
                 "image": "/zdjecia/gdynia2024/podstawaLotni.jpg",
                 "desc": "Tymczasem drugi zespół zajmował się konstrukcją podwozia, na którym lotnia miała się trzymać podczas rozpędzania na rampie. Spawanie konstrukcji wózka było wymagającym zajęciem lecz i z nim sobie poradziliśmy, jednocześnie przyjmując spawalnictwo jako nasz motyw przewodni. O zaplecze techniczne zadbali nasi koledzy i koleżanki z  Kompozytywnych i dzięki ich garażu i nieocenionej pomocy mogliśmy wykonać zadanie na czas, a dzień w którym zakończyliśmy pracę i czekaliśmy na załadunek poszczególnych komponentów lotni w czasie gdy schodziła z nas presja czasu, zapamiętamy do końca życia."

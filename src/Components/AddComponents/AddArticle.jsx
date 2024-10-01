@@ -2,12 +2,13 @@ import { useState } from "react";
 import axios from "axios";
 import "./addArticle.css";
 import { useLocation } from "react-router-dom";
+import AddParagraph from "./AddParagraph";
 
 function AddArticle(props) {
     const location = useLocation();
 
     let isEdit = false;
-    let paragraphsA = new Array();
+    const [paragraphsA, setParagraphsA] = useState([]);
 
     let project = {
         id: 0,
@@ -30,23 +31,42 @@ function AddArticle(props) {
         cover_image: project.cover_image, //path
         cover_desc: project.cover_desc,
         page_url: project.page_url,
-        paragraphs: project.paragraphs,
+        paragraphs: project.paragraphs, //json with multiple paths and descriptions
         more_images: project.more_images //json with multiple paths and descriptions
     });
     const [response, setResponse] = useState(null);
 
-    const makeP_JSON = (target) => {
+    const makeP_JSON = (e) => {
+        const target = e.target;
+        console.log(target.id);
         if(paragraphsA.length < target.id) {
-            paragraphsA.push()
+            let obj = {
+                key: target.id,
+                desc: target.value,
+                image_path: "",
+                image_desc: ""
+            }
+            paragraphsA[target.id] = obj;
+        } else {
+            paragraphsA[target.id][target.desc] = target.value;
         }
+
+        paragraphsA.forEach(element => {
+            console.log(element);
+        });
+        console.log(paragraphsA);
+        setFormData({
+            ...formData,
+            ["paragraphs"]: paragraphsA
+        });
     }
 
     const handleChange = (e) => {
         const { name, value, id } = e.target;
-        // setFormData({
-        //     ...formData,
-        //     [name]: value
-        // });
+        setFormData({
+            ...formData,
+            [name]: value
+        });
     };
 
     const handleFileChange = (e) => {
@@ -118,23 +138,10 @@ function AddArticle(props) {
                         onChange={handleChange}
                     /><br /><br /><br />
 
-                    <label>Akapit 1: </label><br />
-                    <textarea
-                        name="descr"
-                        className="addPersonInput"
-                        type="text"
-                        value={formData.descr}
-                        onChange={handleChange}
-                    /><br />
-
-                    <label htmlFor="image_path">{!isEdit ? "Wybierz zdjęcie:" : "Jeżeli nie chcesz zmieniać zdjęcia, nie wgrywaj nowego pliku."}</label> <br />
-                    <input
-                        type="file"
-                        id="image_path"
-                        name="image_path"
-                        onChange={handleFileChange}
-                        multiple
-                    />
+                    <AddParagraph id={1} handleChange={makeP_JSON} handleFileChange={handleFileChange} isEdit={isEdit}/>
+                    <AddParagraph id={2} handleChange={makeP_JSON} handleFileChange={handleFileChange} isEdit={isEdit}/>
+                    <AddParagraph id={3} handleChange={makeP_JSON} handleFileChange={handleFileChange} isEdit={isEdit}/>
+                    <AddParagraph id={4} handleChange={makeP_JSON} handleFileChange={handleFileChange} isEdit={isEdit}/>
 
                     <br /><br />
 

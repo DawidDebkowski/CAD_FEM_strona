@@ -30,6 +30,7 @@ function AddPerson(props) {
         image_path: person.image_path
     });
     const [response, setResponse] = useState(null);
+    const [status, setStatus] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -61,17 +62,21 @@ function AddPerson(props) {
             axios.post(API_LINK + person.id.toString(), form)
                 .then((response) => {
                     setResponse(response.data);
+                    setStatus(true)
                 })
                 .catch((error) => {
-                    setResponse(`Error: ${error.message}, ${error.file}, ${error.line}`);
+                    setResponse(`Error: ${JSON.stringify(error)}, ${error.message}, ${error.file}, ${error.line}`);
+                    setStatus(false)
                 });
-        } else {
-            axios.post(API_LINK, form)
+            } else {
+                axios.post(API_LINK, form)
                 .then((response) => {
                     setResponse(response.data);
+                    setStatus(true)
                 })
                 .catch((error) => {
                     setResponse(`Error: ${error.message}, ${error.file}, ${error.line}`);
+                    setStatus(false)
                 });
         }
     };
@@ -135,7 +140,11 @@ function AddPerson(props) {
                     <button type="submit">Submit</button>
                 </fieldset>
             </form>
-            {response && <div className="response">{JSON.stringify(response)}</div>}
+            {response &&
+                <div className={"responseBox" + (status ? " greenBorder" : " redBorder")}>
+                    <h2>{status ? "Dodano osobę" : "Nie udało się dodać osoby (wszystkie pola oprócz zdjęcia muszą być wypełnione)"}</h2>
+                    <p className="response">{JSON.stringify(response)}</p>
+                </div>}
         </div>
     );
 }

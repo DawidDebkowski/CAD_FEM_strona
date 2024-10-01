@@ -3,3 +3,22 @@
     justify-content: center;
     align-items: center;
 }
+
+.addPerson .responseBox {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 5px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.redBorder {
+    border-color: rgb(190, 43, 43);
+}
+
+.greenBorder {
+    border-color: rgb(31, 163, 38);
+}
