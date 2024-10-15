@@ -1,158 +1,184 @@
-import { useState } from "react";
-import axios from "axios";
-import "./addArticle.css";
-import { useLocation } from "react-router-dom";
-import AddParagraph from "./AddParagraph";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Formik, Field, Form, ErrorMessage, FieldArray } from 'formik';
+import axios from 'axios';
 
-function AddArticle(props) {
-    const location = useLocation();
+export default function AddArticle(props) {
+    const isEdit = false;
 
-    let isEdit = false;
-    const [paragraphsA, setParagraphsA] = useState([]);
+    const handleSubmit = async (values) => {
+        const formData = new FormData();
+        formData.append('title', values.title);
+        formData.append('cover_desc', values.cover_desc);
+        formData.append('cover_img', values.cover_img);
 
-    let project = {
-        id: 0,
-        title: '',
-        cover_image: '', //path
-        cover_desc: '',
-        page_url: 'Zarząd',
-        paragraphs: null,
-        more_images: null //json with multiple paths and descriptions
-    }
+        values.paragraphs.forEach((paragraph, index) => {
+            formData.append(`paragraphs[${index}][desc]`, paragraph.desc);
+            formData.append(`paragraphs[${index}][image]`, paragraph.image);
+            formData.append(`paragraphs[${index}][imageDesc]`, paragraph.imageDesc);
+        });
 
-    if (location.state?.project != null) {
-        project = location.state.project;
-        isEdit = true;
-    }
+        values.more_images.forEach((image, index) => {
+            formData.append(`more_images[${index}][src]`, image.src);
+        });
 
-    const [formData, setFormData] = useState({
-        id: project.id,
-        title: project.title,
-        cover_image: project.cover_image, //path
-        cover_desc: project.cover_desc,
-        page_url: project.page_url,
-        paragraphs: project.paragraphs, //json with multiple paths and descriptions
-        more_images: project.more_images //json with multiple paths and descriptions
-    });
-    const [response, setResponse] = useState(null);
+        try {
+            const response = await axios.post(import.meta.env.VITE_API_LINK + "/cadfemapi/addArticle/", formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
 
-    const makeP_JSON = (e) => {
-        const target = e.target;
-        console.log(target.id);
-        if(paragraphsA.length < target.id) {
-            let obj = {
-                key: target.id,
-                desc: target.value,
-                image_path: "",
-                image_desc: ""
+            console.log('Success:', response.data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
+    const initialValues = {
+        paragraphs: [
+            {
+                key: 0,
+                imageDesc: '',
+                image: '',
+                desc: ''
             }
-            paragraphsA[target.id] = obj;
-        } else {
-            paragraphsA[target.id][target.desc] = target.value;
-        }
-
-        paragraphsA.forEach(element => {
-            console.log(element);
-        });
-        console.log(paragraphsA);
-        setFormData({
-            ...formData,
-            ["paragraphs"]: paragraphsA
-        });
+        ],
+        title: '',
+        cover_desc: '',
+        cover_img: '',
+        more_images: [
+            {
+                key: 0,
+                src: ''
+            }
+        ],
     }
 
-    const handleChange = (e) => {
-        const { name, value, id } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
-
-    const handleFileChange = (e) => {
-        setFormData({
-            ...formData,
-            image: e.target.files[0],
-            image_path: "new file",
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const form = new FormData();
-        for (const key in formData) {
-            form.append(key, formData[key]);
-        }
-
-        const API_LINK = import.meta.env.VITE_API_LINK + "/cadfemapi/addPerson/";
-
-        if (isEdit) {
-            axios.post(API_LINK + person.id.toString(), form)
-                .then((response) => {
-                    setResponse(response.data);
-                })
-                .catch((error) => {
-                    setResponse(`Error: ${error.message}, ${error.file}, ${error.line}`);
-                });
-        } else {
-            axios.post(API_LINK, form)
-                .then((response) => {
-                    setResponse(response.data);
-                })
-                .catch((error) => {
-                    setResponse(`Error: ${error.message}, ${error.file}, ${error.line}`);
-                });
-        }
-    };
+    const handleFileChange = () => {
+        return 0;
+    }
 
     return (
-        <div className="addPerson">
-            <form onSubmit={handleSubmit}>
-                <fieldset>
-                    <legend>{isEdit ? "Edytuj osobę" : "Dodaj osobę"}</legend>
-                    <label>Tytuł: </label><br />
-                    <input
-                        name="title"
-                        className="addPersonInput"
-                        type="text"
-                        value={formData.title}
-                        onChange={handleChange}
-                    /><br /><br />
+        <div>
+            <h1>Add Article</h1>
+            <Formik
+                initialValues={initialValues}
+                onSubmit={handleSubmit}
+                // {async (values) => {
+                //     await new Promise((r) => setTimeout(r, 500));
+                //     alert(JSON.stringify(values, null, 2));
+                // }}
+            >
+                {({ values, setFieldValue }) => (
+                    <Form>
+                        <fieldset>
+                            <legend>{isEdit ? "Edit Article" : "Add Article"}</legend>
+                            <label>Title: </label><br />
+                            <Field
+                                name="title"
+                                className="addArticleInput"
+                                type="text"
+                            /><br /><br />
 
-                    <label htmlFor="cover_image">{!isEdit ? "Wybierz zdjęcie głowne:" : "Jeżeli nie chcesz zmieniać zdjęcia, nie wgrywaj nowego pliku."}</label> <br />
-                    <input
-                        type="file"
-                        id="cover_image"
-                        name="cover_image"
-                        onChange={handleFileChange}
-                    />
-                    <br /><br />
+                            <label htmlFor="cover_image">{!isEdit ? "Choose cover image:" : "If you don't want to change the image, don't upload a new file."}</label> <br />
+                            <input
+                                type="file"
+                                id="cover_image"
+                                name="cover_image"
+                                onChange={(event) => {
+                                    setFieldValue("cover_img", event.currentTarget.files[0]);
+                                }}
+                            />
+                            <br /><br />
 
-                    <label>Opis tytułowy: </label><br />
-                    <textarea
-                        name="cover_desc"
-                        className="addPersonInput"
-                        type="text"
-                        value={formData.cover_desc}
-                        onChange={handleChange}
-                    /><br /><br /><br />
+                            <label>Cover Description: </label><br />
+                            <Field
+                                name="cover_desc"
+                                className="addArticleInput"
+                                type="text"
+                                as="textarea"
+                            /><br /><br /><br />
 
-                    <AddParagraph id={1} handleChange={makeP_JSON} handleFileChange={handleFileChange} isEdit={isEdit}/>
-                    <AddParagraph id={2} handleChange={makeP_JSON} handleFileChange={handleFileChange} isEdit={isEdit}/>
-                    <AddParagraph id={3} handleChange={makeP_JSON} handleFileChange={handleFileChange} isEdit={isEdit}/>
-                    <AddParagraph id={4} handleChange={makeP_JSON} handleFileChange={handleFileChange} isEdit={isEdit}/>
-
-                    <br /><br />
-
-                    
-
-                    <button type="submit">Submit</button>
-                </fieldset>
-            </form>
-            {response && <div className="response">{JSON.stringify(response)}</div>}
+                            <FieldArray name="paragraphs">
+                                {({ insert, remove, push }) => (
+                                    <>
+                                        {values.paragraphs.length > 0 &&
+                                            values.paragraphs.map((paragraph, index) => (
+                                                <div className="row" key={index}>
+                                                    <fieldset>
+                                                    <div className="col">
+                                                        <label htmlFor={`paragraphs.${index}.desc`}>Description</label><br />
+                                                        <Field
+                                                            name={`paragraphs.${index}.desc`}
+                                                            placeholder="Description"
+                                                            type="text"
+                                                            className="addArticleInput"
+                                                            as="textarea"
+                                                        /><br />
+                                                        <ErrorMessage
+                                                            name={`paragraphs.${index}.desc`}
+                                                            component="div"
+                                                            className="field-error"
+                                                        /><br />
+                                                    </div>
+                                                    <div className="col">
+                                                        <label htmlFor={`paragraphs.${index}.image`}>Image</label><br />
+                                                        <input
+                                                            type="file"
+                                                            id={`paragraphs.${index}.image`}
+                                                            name={`paragraphs.${index}.image`}
+                                                            onChange={(event) => {
+                                                                setFieldValue(`paragraphs.${index}.image`, event.currentTarget.files[0]);
+                                                            }}
+                                                        /><br />
+                                                        <ErrorMessage
+                                                            name={`paragraphs.${index}.image`}
+                                                            component="div"
+                                                            className="field-error"
+                                                        /><br />
+                                                    </div>
+                                                    <div className="col">
+                                                        <label htmlFor={`paragraphs.${index}.imageDesc`}>Image Description</label><br />
+                                                        <Field
+                                                            name={`paragraphs.${index}.imageDesc`}
+                                                            placeholder="Image Description"
+                                                            type="text"
+                                                            className="addArticleInput"
+                                                        /><br />
+                                                        <ErrorMessage
+                                                            name={`paragraphs.${index}.imageDesc`}
+                                                            component="div"
+                                                            className="field-error"
+                                                        /><br />
+                                                    </div>
+                                                    <div className="col">
+                                                        <button
+                                                            type="button"
+                                                            className="secondary"
+                                                            onClick={() => remove(index)}
+                                                        >
+                                                            X
+                                                        </button><br />
+                                                    </div>
+                                                    </fieldset><br />
+                                                </div>
+                                            ))}
+                                        <button
+                                            type="button"
+                                            className="secondary"
+                                            onClick={() => push({ key: values.paragraphs.length, imageDesc: '', image: '', desc: '' })}
+                                        >
+                                            Add Paragraph
+                                        </button><br />
+                                    </>
+                                )}
+                            </FieldArray>
+                            <button type="submit">Submit</button><br />
+                        </fieldset>
+                    </Form>
+                )}
+            </Formik>
         </div>
     );
 }
-
-export default AddArticle;
