@@ -17,6 +17,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    "react/prop-types": [{ ignore: ".forEach"}]
+    "react/prop-types": ['error', { ignore: ['forEach'] }]
   },
 }
