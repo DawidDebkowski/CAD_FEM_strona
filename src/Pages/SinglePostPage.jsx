@@ -14,7 +14,7 @@ export class SingleProjectInfo {
 }
 
 export default function SinglePostPage() {
-    var project = new SingleProjectInfo("Tytuł Projektu, który będzie taki",
+    let project = new SingleProjectInfo("Tytuł Projektu, który będzie taki",
         "Prosty opis jakiś krótki podobno ale nie wiem jak krótki pewnie tak jest okej.",
         "Imie",
         "26.05.2024",

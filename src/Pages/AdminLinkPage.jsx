@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { myRoutes } from "../App";
 import "./adminLinkPage.css"
 import LinkerButton from "../Components/LinkerButton";
