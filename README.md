@@ -1,3 +1,11 @@
+# Strona Koła Naukowego CAD/FEM Politechniki Wrocławskiej
+
+## Stworzona w React + php (help me)
+
+
+
+#Leaving it here for later
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
