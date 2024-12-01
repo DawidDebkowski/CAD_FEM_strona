@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.1",
     "axios": "^1.7.2",
     "formik": "^2.4.6",
     "prop-types": "^15.8.1",
@@ -20,11 +22,12 @@
     "react-slideshow-image": "^4.3.1",
     "react-social-icons": "^6.18.0",
     "styled-components": "^6.1.8",
-    "swr": "^2.2.5"
+    "swr": "^2.2.5",
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
