@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import ProjectBox from "./ProjectBox";
 import "./projectsHolder.css"
+import React from "react";
 
 export default function ProjectsHolder({ projects, alternating = false }) {
     let projectList = [];

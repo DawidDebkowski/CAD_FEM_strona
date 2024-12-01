@@ -13,6 +13,14 @@ export type project = {
     paragraphs: paragraph[]
 }
 
+export type mockProjects = {
+    key: number,
+    title: string,
+    image: string,
+    linkTo: string,
+    desc: string
+}
+
 export type paragraph = {
     key: number,
     imageDesc: string,

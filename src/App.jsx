@@ -3,7 +3,7 @@ import './Pages/HomePage.jsx'
 import './Pages/AboutUs.jsx'
 import AboutUs from "./Pages/AboutUs.jsx";
 import HomePage from "./Pages/HomePage.jsx";
-import ProjectsPage from "./Pages/ProjectsPage.jsx";
+import ProjectsPage from "./Pages/ProjectsPage.tsx";
 import SponsorPage from "./Pages/SponsorPage.jsx";
 import NewsPage from "./Pages/NewsPage/NewsPage.jsx";
 import ContactPage from "./Pages/ContactPage/ContactPage.jsx";
@@ -35,7 +35,7 @@ export const myRoutes = {
 
 export default function App() {
   return (
-    <div className="appContainer">
+    <div className="flex flex-col min-h-screen">
       <BrowserRouter>
         <Header />
         <div className="appMain">

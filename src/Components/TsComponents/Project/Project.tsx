@@ -1,15 +1,15 @@
 import ProjectPhotoHolder from "./ProjectPhotoHolder";
 import SponsorLogos from "./SponsorLogos";
-import {useMockProjects} from "../../../Hooks/useProjects";
+import {useMockProject } from "../../../Hooks/useProjects";
 import {project} from "../../../models/types";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import React from "react";
 import PhotoGallery from "./PhotoGallery";
 
-export default function RedbullProject() {
+export default function Project() {
 
-    const project:project = useMockProjects();
+    const project:project = useMockProject();
 
     return (
         <>
