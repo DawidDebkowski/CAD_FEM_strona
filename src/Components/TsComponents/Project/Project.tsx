@@ -13,9 +13,9 @@ export default function Project() {
 
     return (
         <>
-            <div className="w-4/5 bg-white">
+            <div className="w-4/5 bg-zinc-200 rounded">
                 <div className="p-5">
-                    <img src="/mechanicy.png" alt="głowne zdjęcie postu" className="w-full h-72 rounded object-cover"/>
+                    <img src="/zdjecia/gdynia2024/ppl3.jpg" alt="głowne zdjęcie postu" className="w-full h-72 rounded object-cover"/>
                     <div className="text-center pb-5">
                         <h1 className="m-2.5 text-4xl font-bold">{project.title}</h1>
                         <p className="text-center">{project.description}</p>
