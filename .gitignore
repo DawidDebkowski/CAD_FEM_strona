@@ -10,6 +10,9 @@
 *.userosscache
 *.sln.docstates
 
+# DawidDebkowski
+/.idea/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
