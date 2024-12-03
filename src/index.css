@@ -19,6 +19,7 @@
 body {
   margin: 0 0 0 0;
   background-color: #FBFBFE;
+  /*background: linear-gradient(to bottom, rgb(29, 56, 86), #4A6E8CFF);*/
 }
 
 .appContainer {

@@ -23,7 +23,7 @@ function Header() {
                 </div>
                 <div className={"navBar " + (isOpen ? "open" : "")} >
                     <NavLink to={myRoutes.dom} className="navButton">Strona Główna</NavLink>
-                    <NavLink to={myRoutes.aktualnosci} className="navButton">Aktualności</NavLink>
+                    {/*<NavLink to={myRoutes.aktualnosci} className="navButton">Aktualności</NavLink>*/}
                     <NavLink to={myRoutes.projekty} className="navButton">Projekty</NavLink>
                     <NavLink to={myRoutes.oNas} className="navButton">O Nas</NavLink>
                     <NavLink to={myRoutes.sponsorzy} className="navButton">Sponsorzy</NavLink>

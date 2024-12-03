@@ -8,7 +8,7 @@ export default function ContactPage() {
             <div className="contactInfoBox">
                 <h1>Zobacz co u nas:</h1>
                 <div className="contactBox">
-                    <Link className="instagramLink contactText" >Instagram</Link>
+                    <Link className="instagramLink contactText" to="https://www.instagram.com/cad.fem_pwr/">Instagram</Link>
                     <SocialIcon className="contactBoxIcon" target="_blank" fallback="instagram" url="https://www.instagram.com/cad.fem_pwr/" />
                 </div>
             </div>

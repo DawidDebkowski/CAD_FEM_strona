@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className="footer">
             <div className="footerSiteName">
-                <img className="footerLogoImage" src="/cadfem-przyciete.png" alt="logo cad/fem"/>
+                <img className="footerLogoImage" src="/zdjecia/general/cadfem-przyciete.png" alt="logo cad/fem"/>
                 <div>Copyright © 2024 CAD/FEM, Dawid Dębkowski</div>
             </div>
             <div className="footerLinks">
