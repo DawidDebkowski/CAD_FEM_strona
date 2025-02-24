@@ -285,6 +285,8 @@ FakesAssemblies/
 .ntvs_analysis.dat
 node_modules/
 
+./.idea
+
 # Visual Studio 6 build log
 *.plg
 
@@ -398,3 +400,4 @@ FodyWeavers.xsd
 *.sln.iml
 /dist
 ./dist
+/.idea/
