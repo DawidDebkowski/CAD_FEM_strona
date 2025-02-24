@@ -4,6 +4,7 @@ import People from '../Components/AboutUsPage/People.jsx'
 import MainPhoto from '../Components/AboutUsPage/MainPhoto.jsx'
 import axios from 'axios'
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 
 export default function AboutUs({isAdmin=false})
 {
@@ -25,3 +26,7 @@ export default function AboutUs({isAdmin=false})
       </React.StrictMode>
     )
 }
+
+AboutUs.propTypes = {
+  isAdmin: PropTypes.bool
+};

@@ -3,11 +3,11 @@ import './Pages/HomePage.jsx'
 import './Pages/AboutUs.jsx'
 import AboutUs from "./Pages/AboutUs.jsx";
 import HomePage from "./Pages/HomePage.jsx";
-import ProjectsPage from "./Pages/ProjectsPage.jsx";
+import ProjectsPage from "./Pages/ProjectsPage.tsx";
 import SponsorPage from "./Pages/SponsorPage.jsx";
 import NewsPage from "./Pages/NewsPage/NewsPage.jsx";
 import ContactPage from "./Pages/ContactPage/ContactPage.jsx";
-import SinglePostPage from "./Pages/SinglePostPage.jsx";
+import SingleProjectPage from "./Pages/SingleProjectPage.jsx";
 import Header from "./Components/MainHeader/Header.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import TestPage from "./Pages/TestPage.jsx";
@@ -18,6 +18,7 @@ import AdminLinkPage from "./Pages/AdminLinkPage.jsx";
 import EditMembersPage from "./Pages/EditPages/EditMembersPage.jsx";
 import RemoveMemberPage from "./Pages/RemovePage/RemoveMemberPage.jsx";
 import AddArticlePage from "./Pages/AddPages/AddArticlePage.jsx";
+import React from "react";
 
 export const myRoutes = {
   "dom": "/dom",
@@ -34,7 +35,7 @@ export const myRoutes = {
 
 export default function App() {
   return (
-    <div className="appContainer">
+    <div className="flex flex-col min-h-screen">
       <BrowserRouter>
         <Header />
         <div className="appMain">
@@ -48,7 +49,7 @@ export default function App() {
             <Route path="/sponsorzy" element={<SponsorPage />} />
             <Route path="/kontakt" element={<ContactPage />} />
             <Route path="/aktualnosci" element={<NewsPage />} />
-            <Route path="/projekty/testPost" element={<SinglePostPage />} />
+            <Route path="/projekty/testPost" element={<SingleProjectPage />} />
             <Route path="/testPage" element={<TestPage />} />
             <Route path="/addPerson" element={<AddPersonPage />} />
             <Route path="/adminPage" element={<AdminLinkPage />} />

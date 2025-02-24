@@ -1,9 +1,0 @@
-.mainBody {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.heading {
-    text-align: center;
-    font-size: 2rem;
-}
