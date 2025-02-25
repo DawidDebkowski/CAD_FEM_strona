@@ -41,6 +41,5 @@ export default function PhotoGallery({ images }: Props) {
                     </div>
                 </div>
             </PhotoProvider>
-            );
         </>)
 }
