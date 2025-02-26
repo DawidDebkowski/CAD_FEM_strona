@@ -1,9 +1,3 @@
-section{
-    /* display: flex;
-    justify-content: center;
-    border: solid green; */
-}
-
 .each-slide {
   display: flex;
   justify-content: center;
@@ -11,106 +5,37 @@ section{
   height: 50vh;
 }
 
-.each-slide {
-  padding: auto;
-}
-
 .each-slide img {
   width: 100%;
   object-fit: cover;
 }
 
-.content{
-  width: 60%;
-  /* border: solid red;  */
-  display: flex;
-}
-
-#stopkasec{
-    display: flex;
-    justify-content: center;
-}
-
-#onessec{
-    display: flex;
-    justify-content: center;
-}
 #onasdiv{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#gora{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: auto;
-}
-.tekst{
-    flex-basis: 50%;
-}
-#zdj{
-    flex-basis: 50%;
-    max-width: 50%;
-}
-#dol{
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 30px;
-}
-#dol div{
-    width: 100%;
-    margin: 0px 20px;
-}
-#dol div:first-of-type{
-    margin-left: 0px;
-}
-#dol div:last-of-type{
-    margin-right: 0px;
-}
-#osoba1 img, #osoba2 img, #osoba3 img{ 
-    width: 100%;
-}
-#stopkadiv{
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-}
-#stpkl{
-    /* border: solid yellow; */
-}
-#stpkp{
-    /* border: solid black; */
-}
-/* SLIDER */
-#sliderSection {
-    display: flex;
-    flex-direction: column;
-}
-* {box-sizing:border-box}
-
-/* Slideshow container */
 
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+    display: none;
 }
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: darkblue;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: darkblue;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
 /* Position the "next button" to the right */
@@ -169,4 +94,21 @@ section{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+/*
+    SEKCJA PONIŻEJ SLIDERA
+ */
+
+.homeSectionHolder {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.homeSectionHolder hr {
+    background-color: #42DB47;
+    border: 0.12rem solid #B4C6DB;
+    border-radius: 100px;
+    /* color: #3D8ADB; */
 }

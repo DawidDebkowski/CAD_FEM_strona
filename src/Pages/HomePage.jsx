@@ -1,38 +1,39 @@
 import './homePage.css'
 import SlideShow from "../Components/HomePage/SlideShow.jsx";
 import 'react-slideshow-image/dist/styles.css'
-import ProjectsHolder from "../Components/ProjectsPage/ProjectsHolder.jsx";
+import {useHomePageData} from "../Hooks/useProjects.ts";
+import React from "react";
+import HomeSection from "../Components/HomePage/HomeSection.tsx";
 
 const images = [
     "/zdjecia/general/ekipa.png",
-    // "/zdjecia/general/cadfem-przyciete.png",
+    "/zdjecia/general/LOGO KOLOR.png",
 ];
 
 export default function HomePage() {
-    console.log(import.meta.env.VITE_API_LINK);
-    //window.location.href = "/home.html";
+    const data = useHomePageData();
+    const alternating = true;
+
+    let projectList = [];
+    let side = false;
+    data.forEach(project => {
+        projectList.push(<HomeSection title={project.title} image={project.image} desc={project.desc} linkTo={project.linkTo} isRight={side} />)
+        if (alternating) {
+            side = !side;
+        }
+    });
+
     return (
         <>
-            <link rel="icon" type="image/ico" href="./favicon.ico" />
+            <link rel="icon" type="image/ico" href="/favicon.ico" />
             <section id="slideshow">
                 <SlideShow images={images} size={images.length}/>
             </section>
-            <br />
             <section id="onessec">
                 <div id="onasdiv">
-                    <ProjectsHolder alternating={true} projects={[{
-                        title: "Trochę o CAD/FEM",
-                        image: "/zdjecia/general/ekipa.png",
-                        linkTo: "/AboutUs",
-                        desc: "Nasze koło naukowe działa na Wydziale Mechanicznym Politechniki Wrocławskiej pod opieką dr. hab. inż. Damiana Derlukiewicza. Jesteśmy młodym zespołem skupiającym osoby zainteresowane zgłębianiem wiedzy w zakresie komputerowego modelowania 3D oraz analiz wytrzymałościowych. Obecnie jesteśmy skupieni na rozszerzaniu naszych umiejętności projektowania oraz modelowania 3D w programie Autodesk Inventor."
-                    },
-                    // {
-                    //     title: "Dołącz do Nas!",
-                    //     image: "/mechanicy.png",
-                    //     linkTo: "/Kontakt",
-                    //     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius elementum massa, non ullamcorper neque malesuada ac. Pellentesque convallis ultricies mi eget aliquam. Aliquam erat volutpat. Integer fermentum vehicula sapien. Morbi placerat ullamcorper erat id euismod. Cras ullamcorper condimentum turpis ac rhoncus. Aliquam sit amet velit tortor. Integer scelerisque faucibus egestas. Phasellus posuere scelerisque mi nec molestie. Duis condimentum luctus felis ut efficitur. Maecenas enim leo, egestas a auctor ac, egestas in odio. Nunc semper leo id est scelerisque, sed faucibus nibh viverra."
-                    // }
-                    ]} />
+                    <div className="homeSectionHolder">
+                        {projectList}
+                    </div>
                 </div>
             </section>
         </>
