@@ -27,10 +27,10 @@ export const myRoutes = {
   "sponsorzy": "/sponsorzy",
   "aktualnosci": "/aktualnosci",
   "kontakt": "/kontakt",
-  "addPerson": "/addPerson",
-  "editMembersPage": "/editMembersPage",
-  "removeMemberPage": "/removeMemberPage",
-  "addArticlePage": "/addArticlePage",
+  "addPerson": "/adminPage/addPerson",
+  "editMembersPage": "/adminPage/editMembersPage",
+  "removeMemberPage": "/adminPage/removeMemberPage",
+  "addArticlePage": "/adminPage/addArticlePage",
 }
 
 export default function App() {
@@ -51,11 +51,11 @@ export default function App() {
             <Route path="/aktualnosci" element={<NewsPage />} />
             <Route path="/projekty/testPost" element={<SingleProjectPage />} />
             <Route path="/testPage" element={<TestPage />} />
-            <Route path="/addPerson" element={<AddPersonPage />} />
             <Route path="/adminPage" element={<AdminLinkPage />} />
-            <Route path="/editMembersPage" element={<EditMembersPage />} />
-            <Route path="/removeMemberPage" element={<RemoveMemberPage />} />
-            <Route path="/addArticlePage" element={<AddArticlePage />} />
+            <Route path="/adminPage/addPerson" element={<AddPersonPage />} />
+            <Route path="/adminPage/editMembersPage" element={<EditMembersPage />} />
+            <Route path="/adminPage/removeMemberPage" element={<RemoveMemberPage />} />
+            <Route path="/adminPage/addArticlePage" element={<AddArticlePage />} />
           </Routes>
         </div>
         <ScrollToTop/>
