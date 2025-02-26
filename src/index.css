@@ -17,8 +17,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --header-height: 10vh;
+  --header-height: 80px;
   --accent-color: #561436;
+  --main-color: #1D3857;
 }
 
 body {
@@ -34,7 +35,7 @@ body {
 }
 
 .appMain {
-  padding-top: 80px;
+  padding-top: var(--header-height);
   flex: 1;
 }
 

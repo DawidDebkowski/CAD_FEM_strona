@@ -21,7 +21,7 @@ export default function AboutUs({isAdmin=false})
 
     return (
       <React.StrictMode>
-        <MainPhoto></MainPhoto>
+        {/*<MainPhoto></MainPhoto>*/}
         {response && <People isAdmin={isAdmin} peopleList={response}/>}
       </React.StrictMode>
     )
