@@ -11,7 +11,7 @@ function Header() {
             <nav className="headerWrapper">
                 <div className="headerImage">
                     <NavLink to={"/Home"} className="navLogoButton">
-                        <img src="/LOGO.png" alt="brak zdj logo" />
+                        <img src="/zdjecia/logos/LOGO.png" alt="brak zdj logo" />
                     </NavLink>
                     <div className={"menu " + (isOpen ? "open" : "")} onClick={() => {
                         setOpen(!isOpen)

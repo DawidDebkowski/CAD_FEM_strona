@@ -15,8 +15,8 @@ export default function Footer() {
                 <Link to={myRoutes.kontakt} className="footerLink">Kontakt</Link>
             </div>
             <div className="footerOtherLogos">
-                <img className="footerLogoImage" src="/logo-w10.png" alt="logoPWR"/>
-                <img className="footerLogoImage" src="/logoPWR.png" alt="logoPWR"/>
+                <img className="footerLogoImage" src="/zdjecia/logos/logo-w10.png" alt="logoPWR"/>
+                <img className="footerLogoImage" src="/zdjecia/logos/logoPWR.png" alt="logoPWR"/>
             </div>
         </div>
     )

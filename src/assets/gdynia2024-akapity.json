@@ -11,11 +11,11 @@
     },
     {
         "key": 1,
-        "src": "/zdjecia/hugokopter2.png"
+        "src": "/zdjecia/gdynia2024/ppl2.jpg"
     },
     {
         "key": 2,
-        "src": "/ekipa.png"
+        "src": "/zdjecia/gdynia2024/nagroda.jpg"
     },
     {
         "key": 3,
@@ -23,12 +23,17 @@
     },
     {
         "key": 4,
-        "src": "/projekt.png"
+        "src": "/zdjecia/gdynia2024/ppl1.jpg"
     },
     {
         "key": 5,
-        "src": "/ekipa.png"
-    }],
+        "src": "/zdjecia/gdynia2024/ppl3.jpg"
+    },
+    {
+        "key": 5,
+        "src": "/zdjecia/gdynia2024/naMiejscu.jpg"
+    }
+    ],
     "paragraphs":  [
         {
             "key": 0,
