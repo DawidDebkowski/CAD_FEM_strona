@@ -15,7 +15,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+/public/zdjecia/members/*
 # Mono auto generated files
 mono_crash.*
 
@@ -404,3 +404,4 @@ FodyWeavers.xsd
 /dist
 ./dist
 /.idea/
+/public/zdjecia/members/
