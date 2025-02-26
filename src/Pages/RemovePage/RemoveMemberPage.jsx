@@ -6,6 +6,7 @@ import { useState } from "react";
 function RemoveMemberPage() {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
+    const [status, setStatus] = useState(null);
     const location = useLocation();
 
     const removePerson = () => {
@@ -15,20 +16,30 @@ function RemoveMemberPage() {
             axios.delete(import.meta.env.VITE_API_LINK + "/cadfemapi/addPerson/" + person.id.toString())
             .then((response) => {
                 setResponse(response.data);
+                setStatus(true);
             })
             .catch((error) => {
                 setError(`Error: ${error.message}, ${error.file}, ${error.line}`);
+                setStatus(false);
             });
         }
+        console.log(status)
+        console.log(response)
     }
 
     return (
-        <>
-            <h1>Czy na pewno?</h1>
-            <button onClick={removePerson}>TAK</button>
-            {response && (<div>{response["message"]}</div>)}
+        <div className={"m-3 flex flex-col gap-4"}>
+            <h1>Czy na pewno? To na stałe usunie tę osobę z bazy danych. Nie można tego cofnąć.</h1>
+            <button onClick={removePerson} className={"bg-blue-400 p-2 text-3xl"}>TAK</button>
+            {response &&
+                <div>
+                    <p>
+                        {response["message"]}
+                    </p>
+                </div>}
             {error && (<div>{error}</div>)}
-        </>
+            {status!=null && (<div><h1>{status ? "Usunięto osobę" : "Nie udało się usunąć"}</h1></div>)}
+        </div>
     );
 }
 

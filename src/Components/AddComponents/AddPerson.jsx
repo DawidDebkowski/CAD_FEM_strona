@@ -21,6 +21,13 @@ function AddPerson(props) {
         isEdit = true;
     }
 
+    let messagePositive = "Dodano osobę";
+    let messageNegative = "Nie udało się dodać osoby (wszystkie pola oprócz zdjęcia muszą być wypełnione)";
+    if(isEdit){
+        messagePositive = "Edytowano osobę";
+        messageNegative = "Nie udało się edytować osoby (ciężko stwierdzić czemu, zgłoś ten błąd z opisem kroków, które wykonałeś)";
+    }
+
     const [formData, setFormData] = useState({
         id: person.id,
         fname: person.fname,
@@ -142,7 +149,7 @@ function AddPerson(props) {
             </form>
             {response &&
                 <div className={"responseBox" + (status ? " greenBorder" : " redBorder")}>
-                    <h2>{status ? "Dodano osobę" : "Nie udało się dodać osoby (wszystkie pola oprócz zdjęcia muszą być wypełnione)"}</h2>
+                    <h2>{status ? messagePositive : messageNegative}</h2>
                     <p className="response">{JSON.stringify(response)}</p>
                 </div>}
         </div>
