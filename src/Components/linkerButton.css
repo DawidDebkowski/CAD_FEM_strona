@@ -5,3 +5,15 @@
     max-height: 80px;
     text-wrap: nowrap;
 }
+
+.btn {
+    transition-duration:.4s;
+    transition-property:all;
+    margin:1%;
+    background-color:#4485cf;
+    padding:1%;
+    font-size:large
+}
+.btn:hover {
+    background-color:#1e6ec9
+}
