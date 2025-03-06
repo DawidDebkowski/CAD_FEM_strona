@@ -35,7 +35,7 @@ export default function PhotoGallery({ images }: Props) {
         <>
             <PhotoProvider>
                 <div className="photoGalleryWrapper">
-                    <h2>Galeria</h2>
+                    <h2 className="text-3xl pb-4">Galeria</h2>
                     <div className="photoGalleryBox">
                         {images.map(buildImage)}
                     </div>

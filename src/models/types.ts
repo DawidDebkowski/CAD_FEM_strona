@@ -4,13 +4,14 @@ export type image = {
 }
 
 export type project = {
-    author: string,
-    description: string,
-    date: string,
-    text: string,
+    id: string,
     title: string,
+    author: string,
     moreImages: image[],
     paragraphs: paragraph[]
+    additionalMessage: string,
+    thanks: string,
+    sponsors: sponsor[],
 }
 
 export type mockProjects = {

@@ -1,9 +1,6 @@
 {
+    "id": "RedbullGdynia2024",
     "title": "Redbull Konkurs Lotów 2024 Gdynia",
-    "description": "",
-    "author": "imie",
-    "date": "23.06.2024",
-    "text": "",
     "moreImages": 
     [{
         "key": 0,
@@ -58,6 +55,20 @@
             "imageDesc": "Nasza drużyna",
             "image": "/zdjecia/gdynia2024/team1.jpg",
             "desc": "Był to nasz pierwszy tak duży i rozbudowany projekt i jesteśmy dumni z naszego zespołu, Cieszymy się również i dziękujemy za bardzo owocną współpracę z KMNK Kompozytywni. Dzięki wam ten projekt zaistniał najpierw w naszych głowach, potem materializował się w trakcie pracy, by następnie zapisać się w naszej historii."
+        }
+    ],
+    "additionalMessage": "Projekt wykonany we współpracy z kołem naukowym Kompozytywni.",
+    "thanks": "Jesteśmy bardzo wdzięczni za pomoc w wykonaniu tego projektu. Chcemy podziękować wszystkim sponorą którzy w nas uwierzyli w szczególności Janu Hurkotowi, Przychodni NuvaMed, Wrap Polska i fundacji Manus, bez was to by się nie udało",
+    "sponsors": [
+        {
+            "key": 0,
+            "name": "Red Bull",
+            "imagePath": "/zdjecia/redbullMock.jpg"
+        },
+        {
+            "key": 1,
+            "name": "Red Bull2",
+            "imagePath": "/zdjecia/redbullMock2.jpg"
         }
     ]
 }
