@@ -6,8 +6,8 @@ import React from "react";
 import HomeSection from "../Components/HomePage/HomeSection.tsx";
 
 const images = [
-    "/zdjecia/general/ekipa.png",
     "/zdjecia/general/LOGO KOLOR.png",
+    "/zdjecia/general/ekipa.jpg",
 ];
 
 export default function HomePage() {

@@ -22,7 +22,7 @@ export default function ProjectBox({ title, image, desc, linkTo, isRight = false
     return (
         <>
             <div className="bg-white">
-                <img className={"w-5/12 " + baseDirection} src={image} alt={"fota"}/>
+                <img className={"w-5/12 object-contain " + baseDirection} src={image} alt={"zdjęcie całego cadfem"}/>
                 <div className="text-left font-bold text-2xl pb-3 pt-4">
                     <h1>{title}</h1>
                 </div>
