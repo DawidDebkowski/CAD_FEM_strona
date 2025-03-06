@@ -26,7 +26,7 @@ function Header() {
                     {/*<NavLink to={myRoutes.aktualnosci} className="navButton">Aktualności</NavLink>*/}
                     <NavLink to={myRoutes.projekty} className="navButton">Projekty</NavLink>
                     <NavLink to={myRoutes.oNas} className="navButton">O Nas</NavLink>
-                    <NavLink to={myRoutes.sponsorzy} className="navButton">Sponsorzy</NavLink>
+                    {/*<NavLink to={myRoutes.sponsorzy} className="navButton">Sponsorzy</NavLink>*/}
                     <NavLink to={myRoutes.kontakt} className="navButton">Kontakt</NavLink>
                 </div>
             </nav>

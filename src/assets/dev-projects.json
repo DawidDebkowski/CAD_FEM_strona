@@ -1,0 +1,44 @@
+[
+    {
+        "key": 0,
+        "title": "The Air Welders",
+        "image": "/zdjecia/gdynia2024/nagroda.jpg",
+        "linkTo": "testPost",
+        "desc": "Projekt zakładał skonstruowanie szybowca na konkurs lotów organizowanych przez RedBull. Nasze koło połączyło siły z kołem naukowym Kompozytywni aby sprostać tak wielkiemu zadaniu. Koło naukowe CAD FEM odpowiedzialne było za zaprojektowanie możliwe jak najbardziej optymalnej maszyny latającej razem z podwoziem. Projekt ten pochłonął 2 miesiące prac, począwszy od wybrania odpowiedniej koncepcji samej konstrukcji szybowca, dobranie przekroju skrzydła, dobrania materiałów i oczywiście samego procesu budowy. Jako koło konstruktorów nie tylko pracowaliśmy w środowiskach CAD lecz również aktywnie uczestniczyliśmy w budowie, na bieżąco optymalizując konstrukcję pod kątem sztywności i wagi.  Jako jedna z nielicznych drużyn przeszliśmy testy bhp wzorowo. Nasze starania zaowocowały 2 miejscem na zawodach RedBull Konkurs Lotów 2024.  Ten projekt nauczył nas jak ważny jest podział prac, dobranie odpowiednich osób na odpowiednie stanowiska, zarządzanie budżetem i współpraca z firmami sponsorskimi. To właśnie po nim nasze koło zdecydowało się brać częściej udział w konkursach konstruktorskich."
+    },
+    {
+        "key": 1,
+        "title": "Mega Projekt",
+        "image": "/zdjecia/placeholders/szerokiMechanik.png",
+        "linkTo": "mP",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius elementum massa, non ullamcorper neque malesuada ac. Pellentesque convallis ultricies mi eget aliquam. Aliquam erat volutpat. Integer fermentum vehicula sapien. Morbi placerat ullamcorper erat id euismod. Cras ullamcorper condimentum turpis ac rhoncus. Aliquam sit amet velit tortor. Integer scelerisque faucibus egestas. Phasellus posuere scelerisque mi nec molestie. Duis condimentum luctus felis ut efficitur. Maecenas enim leo, egestas a auctor ac, egestas in odio. Nunc semper leo id est scelerisque, sed faucibus nibh viverra."
+    },
+    {
+        "key": 3,
+        "title": "Aparat 5D",
+        "image": "/zdjecia/placeholders/projekt.png",
+        "linkTo": "ap5D",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius elementum massa, non ullamcorper neque malesuada ac. Pellentesque convallis ultricies mi eget aliquam. Aliquam erat volutpat. Integer fermentum vehicula sapien. Morbi placerat ullamcorper erat id euismod. Cras ullamcorper condimentum turpis ac rhoncus. Aliquam sit amet velit tortor. Integer scelerisque faucibus egestas. Phasellus posuere scelerisque mi nec molestie. Duis condimentum luctus felis ut efficitur. Maecenas enim leo, egestas a auctor ac, egestas in odio. Nunc semper leo id est scelerisque, sed faucibus nibh viverra."
+    },
+    {
+        "key": 4,
+        "title": "Dłuuuuuuuuugi tytuł bo taki sobie ktoś na pewno wymyśli!",
+        "image": "/zdjecia/placeholders/projekt.png",
+        "linkTo": "dlugi",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius elementum massa, non ullamcorper neque malesuada ac. Pellentesque convallis ultricies mi eget aliquam. Aliquam erat volutpat. Integer fermentum vehicula sapien. Morbi placerat ullamcorper erat id euismod. Cras ullamcorper condimentum turpis ac rhoncus. Aliquam sit amet velit tortor. Integer scelerisque faucibus egestas. Phasellus posuere scelerisque mi nec molestie. Duis condimentum luctus felis ut efficitur. Maecenas enim leo, egestas a auctor ac, egestas in odio. Nunc semper leo id est scelerisque, sed faucibus nibh viverra."
+    },
+    {
+        "key": 5,
+        "title": "Dłuuuuuuuuugi tytuł bo taki sobie ktoś na pewno wymyśli!",
+        "image": "/zdjecia/placeholders/projekt.png",
+        "linkTo": "dlugi",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius elementum massa, non ullamcorper neque malesuada ac. Pellentesque convallis ultricies mi eget aliquam. Aliquam erat volutpat. Integer fermentum vehicula sapien. Morbi placerat ullamcorper erat id euismod. Cras ullamcorper condimentum turpis ac rhoncus. Aliquam sit amet velit tortor. Integer scelerisque faucibus egestas. Phasellus posuere scelerisque mi nec molestie. Duis condimentum luctus felis ut efficitur. Maecenas enim leo, egestas a auctor ac, egestas in odio. Nunc semper leo id est scelerisque, sed faucibus nibh viverra."
+    },
+    {
+        "key": 6,
+        "title": "Dłuuuuuuuuugi tytuł bo taki sobie ktoś na pewno wymyśli!",
+        "image": "/zdjecia/placeholders/projekt.png",
+        "linkTo": "dlugi",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius elementum massa, non ullamcorper neque malesuada ac. Pellentesque convallis ultricies mi eget aliquam. Aliquam erat volutpat. Integer fermentum vehicula sapien. Morbi placerat ullamcorper erat id euismod. Cras ullamcorper condimentum turpis ac rhoncus. Aliquam sit amet velit tortor. Integer scelerisque faucibus egestas. Phasellus posuere scelerisque mi nec molestie. Duis condimentum luctus felis ut efficitur. Maecenas enim leo, egestas a auctor ac, egestas in odio. Nunc semper leo id est scelerisque, sed faucibus nibh viverra."
+    }
+]

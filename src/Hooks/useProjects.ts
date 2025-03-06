@@ -8,6 +8,7 @@ import data2 from '../assets/projects.json';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import homePageData from '../assets/home-page.json';
+// import prodHomePageData from '../assets/prod-home-page.json';
 
 export const useMockProject = () => {
     return JSON.parse(JSON.stringify(data)) as project;
@@ -19,4 +20,5 @@ export const useMockProjects = () => {
 
 export const useHomePageData = () => {
     return JSON.parse(JSON.stringify(homePageData)) as mockProjects[];
+    // import.meta.env.VITE_STATE == "prod" ? prodHomePageData :
 }

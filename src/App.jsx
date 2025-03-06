@@ -49,7 +49,7 @@ export default function App() {
             <Route path="/sponsorzy" element={<SponsorPage />} />
             <Route path="/kontakt" element={<ContactPage />} />
             <Route path="/aktualnosci" element={<NewsPage />} />
-            <Route path="/projekty/testPost" element={<SingleProjectPage />} />
+            <Route path="/projekty/RedbullGdynia2024" element={<SingleProjectPage />} />
             <Route path="/testPage" element={<TestPage />} />
             <Route path="/adminPage" element={<AdminLinkPage />} />
             <Route path="/adminPage/addPerson" element={<AddPersonPage />} />
